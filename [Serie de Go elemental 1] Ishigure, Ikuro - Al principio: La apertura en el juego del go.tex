@@ -1,0 +1,2267 @@
+%https://wiki.contextgarden.net/Symbols/utf8 «» “”
+% –	---
+% https://wiki.contextgarden.net/Floating_Objects
+\version[temporary]
+\setuppapersize[A5]%[A4,landscape]
+%\setuparranging[2*2*4]
+\setuplayout		[height=195mm, width=125mm, topspace=10mm, backspace=12mm, header=0mm, footer=5mm, location=middle, marking=on]
+\setuppagenumbering	[location=footer]
+\setupbodyfont		[9pt]
+\setupindenting		[yes,small]
+\definefontfamily	[weiqi]		[rm]	[Weiqi]
+\setupheads			[chapter]	[
+    incrementnumber=yes, % keep an internal title counter+list
+    number=no,           % don't display the counter
+    align=middle,style=\tfc\ss\bf]
+\setupheads			[section]	[incrementnumber=yes,number=no,align=middle,style=\tfb\ss]
+\setupheads			[subsection]	[align=middle,style=\tfa\ss\it]
+\setuplist			[chapter,section,subsection][headnumber=yes]
+\mainlanguage		[es]
+
+\def\baduk#1{\lower.5ex\hbox{\weiqi\tfx #1}}
+
+%%
+\def\kifu#1{\weiqi\tfx #1} 
+\defineblank		[kifu]	[-1430000sp]%[-1268500sp]
+
+%%
+\definefloat	[diagrama]	[diagramas]
+%\setupfloat	[diagrama]	[location=middle]
+\setupcaption	[diagrama]	[headstyle=\tfx,align=middle]
+
+
+%% 
+\starttext
+
+% - Cover page
+\dontleavehmode
+\blank[3cm]
+
+\startalignment[center]
+  \ssd\bf AL PRINCIPIO \blank[medium] LA APERTURA EN EL JUEGO DEL GO \blank[2cm]
+  {\ssb\bi Por} \blank[medium]
+  \ssc Ikuro Ishigure
+\stopalignment
+
+% - Tabla de contenidos 
+\completecontent
+
+\starttitle[title={\bi Acerca del autor}]
+Ikuro Ishigure nació en 1942 en Gifu, Japón. En 1955 entró en la Escuela de Go de Minoru Kitani, 9.º Dan, y vivió allí los siguientes cinco años, obteniendo el rango de Shodan profesional a los diecisiete años de edad. Su historial de promociones es el siguiente:
+
+\blank[big]
+\startalignment[center]
+Shodan ~~~ 1960 \blank[medium]
+2.º Dan ~~~ 1960 \blank[medium]
+3\high{er} Dan ~~~ 1962 \blank[medium]
+4.º Dan ~~~ 1963 \blank[medium]
+5.º Dan ~~~ 1964 \blank[medium]
+6.º Dan ~~~ 1966 \blank[medium]
+7.º Dan ~~~ 1970 \blank[medium]
+8.º Dan ~~~ 1974
+\stopalignment
+\blank[big]
+
+En 1968 ganó un lugar en la 24ª Liga Honinbo, y en 1974 ganó la división superior del torneo de la Nihon Kiin Oteai.
+
+Sus hobbies incluyen la práctica del ski, tenis de mesa, y los deportes en general. Actualmente vive con su esposa —que también es jugadora profesional de Go—, en Shinagawa–ku, Tokio.
+\stoptitle
+
+\starttitle[title={Introducción}]
+Desde el punto de vista teórico, la apertura es la parte más difícil del juego. Para los jugadores profesionales, también lo es desde el punto de vista práctico; por ejemplo, en las partidas de campeonato, que pueden durar dos jornadas, el primer día generalmente se emplea en realizar tan sólo los primeros cincuenta movimientos, y el segundo día, todos los demás hasta la finalización del juego. Tal es la importancia de esta fase preliminar, que si un jugador sale de la apertura con una mala posición, le resulta casi imposible remontar la partida. Los aficionados a veces se apresuran con sus movimientos iniciales, reservando sus energías para las luchas que se traban más adelante; pero esto, más que una muestra de talento, es un indicio de que no entienden la apertura.
+
+El número de posibilidades en cualquier apertura es tan extenso que el jugador, para decidir las primeras jugadas, debe confiar en su sensibilidad más que en un análisis riguroso. Es aquí donde tiene la gran ocasión de usar su imaginación, jugar creativamente, y desarrollar un estilo personal. Ésta es la fase del Go que más ha evolucionado durante los últimos siglos, y sin embargo aún continúa sin ser completamente comprendida.
+
+Ningún libro puede desarrollar la imaginación o el estilo personal de un jugador, y éste tampoco intenta hacerlo. En ese sentido, por lo tanto, es muy incompleto: el lector no encontrará una prescripción para cada situación, y en sus partidas tendrá que ejercer sus propias opciones la mayor parte del tiempo. Lo que hemos intentado darle es una base para empezar: algunos movimientos sensatos, ideas útiles, y un puñado de buenos ejemplos. Si hemos tenido éxito, las siguientes páginas le ayudarán a incrementar su habilidad y a disfrutar más del juego.
+\stoptitle
+
+\startchapter[title={Capítulo I}]
+
+\startsection[title={Las primeras jugadas de la partida}]
+Cuando Negro pone su primera piedra sobre el tablero vacío, tiene trescientos sesenta y un puntos entre los cuales elegir. Incluso teniendo en consideración la simetría, hay cincuenta y cinco movimientos posibles de apertura. Un poco de experiencia demostrará que la primera línea (el borde del tablero) es prácticamente inservible durante los momentos iniciales de la partida, pero aún descontando éstos, todavía quedan cuarenta y cinco posibilidades que Negro tiene que considerar.
+
+Si sabe algo sobre ajedrez, damas, shogi, u otros juegos similares, Negro puede tentarse para colocar su primera piedra en el punto central. En aquéllos juegos las piezas se atacan, se persiguen, e intentan capturarse unas a otras, haciendo del centro, donde tienen la mayor movilidad, la mejor área del tablero. En el Go, sin embargo, las piedras no se mueven, y por lo tanto la situación es exactamente la contraria.
+
+El objetivo en el juego de Go es construir territorio, antes que capturar piezas. Tal como una casa se construye desde el suelo hacia arriba, en el Go es sensato comenzar a construir desde los bordes del tablero, que son una base sólida donde apoyarse. Las esquinas del tablero son los mejores lugares para hacer territorio; es como si el piso y una pared estuvieran ya en su sitio. El centro es la parte menos valiosa del tablero.
+
+\blank[big]
+\startcolumns[n=2]
+\startalignment[center]
+\placediagrama	[force]	[d:a1-1]	{}	{\kifu
+┌┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┐\blank[kifu]
+├┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┤\blank[kifu]
+├┼┼┼┼┼┼┼┼┼┼┼┼┼●┼┼┼┤\blank[kifu]
+├┼┼·┼┼┼┼┼·┼┼┼┼┼·●┼┤\blank[kifu]
+├┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┤\blank[kifu]
+├┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┤\blank[kifu]
+├┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┤\blank[kifu]
+├┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┤\blank[kifu]
+├┼┼┼┼┼┼┼┼●┼┼┼┼┼┼┼┼┤\blank[kifu]
+├┼┼·┼┼┼┼┼·┼┼┼┼┼·┼┼┤\blank[kifu]
+├┼┼┼┼┼┼┼┼●┼┼┼┼┼┼┼┼┤\blank[kifu]
+├┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┤\blank[kifu]
+├┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┤\blank[kifu]
+├┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┤\blank[kifu]
+├┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┤\blank[kifu]
+├┼┼·┼┼┼┼┼·┼┼┼┼┼·┼┼┤\blank[kifu]
+├┼┼┼┼┼┼●┼┼●┼┼┼┼┼┼┼┤\blank[kifu]
+├┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┤\blank[kifu]
+└┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┘}
+\stopalignment
+
+\startalignment[center]
+\placediagrama	[force]	[d:a1-2]	{}	{\weiqi\tfx
+┬┬┬┬┬┬┬┐\blank[kifu]
+┼┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼×××┼┤\blank[kifu]
+┼┼A×××┼┤\blank[kifu]
+┼┼┼┼××┼┤\blank[kifu]
+┼┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼·┼┼┤\blank[kifu]
+┼┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼·┼┼┤\blank[kifu]
+┼┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┼┼┤\blank[kifu]
+┴┴┴┴┴┴┴┘}
+\stopalignment
+\stopcolumns
+
+El \in{Dia.}[d:a1-1] debería hacer este hecho más visible. Cada par de piedras negras muestra una formación que pudo hacerse naturalmente durante el curso del juego. Las dos piedras en la esquina superior derecha confieren a Negro por lo menos diez puntos de territorio, y sus dominios pueden agrandarse rápidamente mediante una extensión hacia el lado inferior del tablero. Las dos piedras en el lado inferior también rodean algún territorio, aunque no tanto como las dos piedras de la esquina. Las dos piedras en el centro, en cambio, son como almas en pena vagando por el desierto. No tienen casi ningún efecto en la construcción de territorio. Como este diagrama sugiere claramente, el flujo natural de juego durante la apertura debe ser: primero ocupar las esquinas, y luego extenderse hacia los laterales. El centro sirve principalmente como lugar hacia donde escaparse, para aquellas piedras que no pueden encontrar espacio suficiente para vivir en el borde del tablero.
+
+Estos principios solamente se aplican a la fase inicial del juego. Más adelante, después de que hayan tenido lugar las primeras batallas, y hayan aparecido en el tablero algunas paredes de piedras, podría hacerse mucho más territorio sobre los laterales que en las esquinas, e incluso a veces puede rodearse una gran área en el centro. Pero, sin perjuicio de ello, la atención debe dirigirse primero a las esquinas; así, muchas partidas comienzan con las primeras cuatro piedras, dispuestas en las cuatro esquinas del tablero. Hay centenares de posibilidades para tales disposiciones, y como no existe consenso acerca de cuáles de ellas son buenas y cuáles son malas, usted puede elegir la que más le guste.
+
+La experiencia ha demostrado que la primera piedra en una esquina abierta, debería jugarse en uno de los puntos marcados {\baduk ×} en el \in{Dia.}[d:a1-2]. Todos estos puntos descansan en la tercera y cuarta líneas, que son de prioritaria importancia durante la apertura. Es innecesario e ineficiente jugar más cerca del borde del tablero que la tercera línea, porque aún cuando una piedra esté en la tercera línea, no hay bastante sitio para que el oponente juegue ventajosamente entre ella y el borde.
+
+Jugadas más alejadas de la esquina que las mostradas en el \in{Dia.}[d:a1-2], no son del todo malas. Existe actualmente un jugador profesional de categoría 5.º Dan, a quien le gusta comenzar en los puntos {\ss 4–6} ({\ss A} en el \in{Dia.}[d:a1-2]), y el gran Minoru Kitani comenzó una vez un juego plantando sus primeras dos piedras en dos de los puntos {\ss 5–5}. Desde posiciones tan distantes, sin embargo, es difícil asegurar territorio en la esquina, que es, después de todo, el objetivo de comenzar jugando en esa zona del tablero. La mayoría de los jugadores profesionales de Go, incluido el autor, se apegan a las jugadas mostradas en el \in{Dia.}[d:a1-2], y de éstas, las más cercanas a la esquina  —los puntos {\ss 3–3}, {\ss 3–4}, y {\ss 4–4}—, son actualmente las más populares.
+
+Cada una de las jugadas del \in{Dia.}[d:a1-2] tiene sus particularidades especiales y continuaciones características, los que se describen a continuación.
+\stopsection
+
+\startsection[title={El punto 3–4}]
+La piedra negra en el \in{Dia.}[d:a2-1] se ha jugado en el punto {\ss 3–4}, donde se logra un buen equilibrio entre la protección de la esquina y el desarrollo hacia el resto del tablero. Sin embargo, dado su posición asimétrica, invita a otra jugada en la misma esquina, tanto de Negro como de Blanco. Tal continuación es tan valiosa como la jugada original, y constituye una de las cuestiones claves en las aperturas que involucran una piedra en el punto {\ss 3–4}.
+
+\blank[big]
+\startcolumns[n=4]
+\startalignment[center]
+\placediagrama	[force]	[d:a2-1]	{}	{\kifu
+┬┬┬┬┬┬┐\blank[kifu]
+┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼●┼┼┤\blank[kifu]
+┼┼┼·┼┼┤\blank[kifu]
+┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┼┤}
+\stopalignment
+
+\startalignment[center]
+\placediagrama	[force]	[d:a2-2]	{}	{\kifu
+┬┬┬┬┬┬┐\blank[kifu]
+┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼●┼┼┤\blank[kifu]
+┼┼┼·┼┼┤\blank[kifu]
+┼┼┼┼❶┼┤\blank[kifu]
+┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼A┼┤\blank[kifu]
+┼┼┼┼┼┼┤}
+\stopalignment
+
+\startalignment[center]
+\placediagrama	[force]	[d:a2-3]	{}	{\kifu
+┬┬┬┬┬┬┐\blank[kifu]
+┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼●┼┼┤\blank[kifu]
+┼┼┼·┼┼┤\blank[kifu]
+┼┼┼❶┼┼┤\blank[kifu]
+┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼A┼┤\blank[kifu]
+┼┼┼┼┼┼┤}
+\stopalignment
+
+\startalignment[center]
+\placediagrama	[force]	[d:a2-4]	{}	{\kifu
+┬┬┬┬┬┬┐\blank[kifu]
+┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼●┼┼┤\blank[kifu]
+┼┼┼·┼┼┤\blank[kifu]
+┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼❶┼┤\blank[kifu]
+┼┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┼┤}
+\stopalignment
+\stopcolumns
+
+Si es Negro quien hace esa jugada de continuación, sus opciones estándares son las ilustradas en los \in{Dias.}[d:a2-2] a \in[d:a2-4]. Éstas, y las formaciones que crean, se llaman {\it shimari}, o reductos de la esquina. Un shimari toma posesión, al menos por el momento, del territorio de la esquina, y forma una base estable para el desarrollo ulterior, especialmente, en los \in{Dias.}[d:a2-2] a \in[d:a2-4], mediante una extensión a la izquierda, a lo largo del lado superior. La mayor actividad durante la apertura está dirigida principalmente a crear tales bases de operaciones.
+
+Para precisar las diferencias entre los \in{Dias.}[d:a2-2] a \in[d:a2-4], diremos que el shimari en el \in{Dia.}[d:a2-2] es el más seguro. El shimari en el \in{Dia.}[d:a2-3] constituye una mejor pared a partir de la cual extenderse a través del lado superior, pero si Blanco juega {\ss A}, entonces queda la puerta abierta para poder introducirse en la esquina. Negro 1 en el \in{Dia.}[d:a2-2] está en la posición correcta para defenderse contra Blanco {\ss A}, pero ejerce menos influencia sobre el lado superior, lo que ilustra la diferencia básica entre jugar en la tercera y cuarta líneas. El shimari en el \in{Dia.}[d:a2-4] es un poco más extenso que los otros dos, pero también es más laxo, de modo que si Blanco tuviera cualquier piedra en las cercanías, estaría en condiciones de invadir la esquina.
+
+Frente a estas limitaciones cabe preguntarse entonces, ¿por qué hacer un shimari? ¿Por qué no extenderse más lejos e intentar delinear un territorio más grande? Extensiones de largo alcance ---como Negro 1 en el Dia. 5---, son jugadas posibles, pero dejan muy vulnerable la esquina, y a veces terminan quedando en el lugar incorrecto, una vez que la situación de la esquina ha quedado definida.
+
+Si es Blanco quien hace la jugada de continuación después del Dia. 1, entonces debe aproximarse a la piedra negra situándose en 1, A, B, o C en el Dia. 6. Estas jugadas, que se conocen como {\it kakari}, son tan valiosas como el shimari que previenen, aunque no son tan simples. Cualquiera de ellas constituye un desafío, que invita al oponente a entablar un combate cuerpo a cuerpo; el Dia. 7 da un ejemplo de la clase de lucha que puede desarrollarse. Negro golpea debajo del kakari de Blanco en 2, y termina con la posesión definitiva de la esquina, mientras que Blanco consigue una base en el lateral, lo que puede considerarse un intercambio justo.
+
+\blank[big]
+\startcolumns[n=3]
+
+\startalignment[center]
+\placediagrama	[force]	[d:a2-5]	{}	{\kifu
+┬┬┬┬┬┐\blank[kifu]
+┼┼┼┼┼┤\blank[kifu]
+┼┼●┼┼┤\blank[kifu]
+┼┼·┼┼┤\blank[kifu]
+┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┤\blank[kifu]
+┼┼┼❶┼┤\blank[kifu]
+┼┼·┼┼┤\blank[kifu]
+┼┼┼┼┼┤\blank[kifu]
+┼┼┼┼┼┤}
+\stopalignment
+
+\startalignment[center]
+\placediagrama	[force]	[d:a2-6]	{}	{\kifu
+┼┼┼┼┼┤\blank[kifu]
+}
+\stopalignment
+
+\startalignment[center]
+\placediagrama	[force]	[d:a2-7]	{}	{\kifu
+┼┼┼┼┼┤\blank[kifu]
+}
+\stopalignment
+\stopcolumns
+
+Secuencias como las del Dia. 7 juegan un rol importante en las aperturas de muchas partidas, y miles de ellas se han ido elaborando a lo largo de los siglos. Tales secuencias se llaman {\it joseki}; los caracteres chinos para esta palabra, significan algo así como “piedras preestablecidas”. Para lograr una buena apertura, no es condición necesaria ni suficiente aprenderse al detalle esta infinidad de combinaciones, por lo que no nos dispersaremos en su estudio; pero si el lector ha avanzado más allá del nivel de 9o Kyu, se beneficiaría echando una mirada a un libro de joseki, tanto para dominar algunas buenas jugadas, como para desarrollar el instinto de lo que constituye un intercambio justo. Si no, tendrá que copiarse de otros jugadores, o directamente improvisar por su cuenta y riesgo.
+\stopsection
+
+\startsection[title={El punto 3--3}]
+El propósito de jugar en el punto 3-3 es defender el territorio de la esquina, haciéndolo con una sola jugada, aunque a expensas de la influencia que pueda ejercerse hacia afuera. La piedra negra en el Dia. 1 construye una pequeña pero definitiva fortaleza, y allí no existe ninguna urgencia para jugar un shimari o un kakari, como sí la hay con una piedra ubicada en el punto 3-4. Por lo tanto, Blanco puede ignorarla, y Negro si decide desarrollarla, usualmente lo hace con una extensión larga, como 1 en el Dia. 2.
+
+Un shimari, como 1 o A en el Dia. 3, sigue siendo aún una buena jugada, pero no es urgente. Negro puede permitirse extenderse largamente primero, y dejar el shimari para más adelante; es muy probable que tenga ocasión de hacerlo, toda vez que Blanco no tiene buenos kakari para hacer, como los tenía en la posición anterior.
+
+%%dia 1-3 pag 16
+
+Los dos diagramas siguientes muestran las maneras básicas de hacer un kakari contra una piedra en el punto 3-3.
+
+%%dia 4-5 pag 16
+
+Blanco puede presionar con 1 en el Dia. 4, lo que conduce generalmente al joseki mostrado. Esta aproximación aprovecha la posición baja de la piedra original de Negro, y acota su territorio, pero por su lado Blanco no logra mucho territorio. Es mejor reservar este kakari como una herramienta de destrucción después de que Negro haya comenzado a construir una gran área alrededor de su piedra. Si Blanco deseara conseguir algún territorio propio, tendría que jugar un kakari como 1 en el Dia. 5 desde la dirección apropiada; pero aquí otra vez, considerado aisladamente, el resultado parece bueno para Negro. Por lo tanto, después de una jugada en el punto 3-3, ambos jugadores permanecen generalmente lejos de la esquina, hasta que el desarrollo en otras partes del tablero hacen de un kakari o un shimari, una jugada apropiada.
+\stopsection
+
+\startsection[title={El punto 4--4}]
+El punto 4--4 es semejante al punto 3-3, tanto en cuanto a su simetría, como al hecho que se desarrolla más naturalmente con una extensión larga que con un shimari. Difiere, sin embargo, en que mientras que una piedra en el punto 3-3 tiende a la defensa del territorio de la esquina, una piedra en el punto 4-4 apunta en la dirección opuesta.
+
+%% dia 1 pag 17
+Blanco puede, de hecho, invadir la esquina directamente, según se muestra en el Dia. 2, y lograr fácilmente una formación viva. Esta invasión se utiliza a menudo en la mitad o última parte de la apertura, como manera de horadar el gran territorio que Negro ya ha comenzado a construir alrededor de su piedra. Esto no le proporciona mucho territorio a Blanco, pero arrebata la esquina a Negro.
+
+Si Blanco está desarrollando un área propia, por ejemplo, en el lado derecho, entonces la manera para atacar la esquina es con el kakari de 1 en el Dia. 3 (en algunas ocasiones, Blanco A, B, o C, es preferible a Blanco 1). Es natural contestar un ataque recibido desde una dirección, con una extensión hacia la dirección contraria; Negro 2 es generalmente un buen movimiento. Luego, Blanco podría extenderse hacia abajo sobre el lado derecho.
+
+%% dia 2-3 pag 17
+
+Blanco 1 en el Dia. 3 no adolece de ninguna desventaja especial, pero nuevamente, no es una jugada urgente como lo es el kakari contra una piedra en el punto 3-4. Antes de comprometerse, Blanco debería esperar hasta que la posición del tablero entero indique desde qué lado sería mejor un kakari, o si sería preferible la invasión del punto 3-3. Puesto que su oponente no tiene ningún shimari atractivo para hacer, Blanco puede permitirse esa espera.
+
+%% dia 4-5 pag18
+
+¿Cómo debe desarrollarse Negro a partir de su piedra en el punto 4-4? Un shimari, tal como Negro 1 en el Dia. 4, es a veces bueno, pero no asegura muy bien la esquina. Si Blanco tuviera una piedra sobre el lado derecho, podría deslizarse hacia adentro con A, dándole un gran tarascón a la esquina; e incluso sería posible la invasión del punto 3-3 en B. En vista de esto, generalmente la mejor manera para que Negro desarrolle su piedra, es una extensión larga, tal como 1 en el Dia. 5.
+
+Blanco a menudo reacciona a Negro 1 haciendo el kakari mostrado en el Dia. 6, antes de que Negro tenga ocasión de extenderse también hacia el otro lado. La secuencia hasta 6, un joseki simple, termina con Negro obteniendo una porción de territorio en el lado superior, mientras que Blanco construye una base a la derecha.
+
+%% dia 6-7 pag 18
+
+Es muy instructivo ver qué sucede cuando Blanco contesta a Negro 1 con una invasión en el punto 3-3, según se muestra en el Dia. 7. La secuencia hasta Negro 13 ahora se convierte en el joseki apropiado, y desde el punto de vista de Blanco, el Dia. 6 le resulta mucho más favorable que éste. Negro tiene la posibilidad de obtener mucho más territorio en el exterior, del que Blanco está consiguiendo en la esquina; la poderosa pared negra le ayudará a respaldar sus operaciones sobre todo el tablero, mientras que el grupo blanco está confinado y sin posibilidad de ejercer influencia. La invasión del punto 3-3 debe utilizarse con cuidado.
+\stopsection
+
+\startsection[title={El punto 3–5}]
+%% dia 1-2 pag 19
+
+La piedra en el Dia. 1, descansando sobre el punto 3-5, se emplaza para respaldar operaciones en el lado superior. Dado su posición asimétrica, invita a una temprana continuación ---tanto un shimari de Negro como un kakari de Blanco--- al igual que una piedra en el punto 3-4.
+
+El shimari en el Dia. 2 es la manera usual para el desarrollo de Negro. Su piedra, sin embargo, admitirá una extensión en la dirección de 1 en el Dia. 3, sin la formación de un shimari, y Negro a veces elige este camino.
+
+%% dia 3-4 pag 19
+
+Si Blanco tiene ocasión de hacerlo antes de que Negro cierre la esquina, jugará un kakari en 1, A, o B en el Dia. 4. Le remitimos a un libro de joseki para los detalles subsecuentes, pero Blanco generalmente obtiene la esquina, mientras Negro se estructura hacia el exterior.
+\stopsection
+
+\startsection[title={El punto 4–5}]
+%% dia 1-2 pag 20
+
+Una piedra en el punto 4-5, como la del Dia. 1, juega un papel bastante similar a una en el punto 3-5; enfatiza el lado superior, y tanto un shimari como un kakari son grandes jugadas de continuación. El shimari se muestra en el Dia. 2, y tres posibles kakari se muestran en los Dias. 3, 4, y 5.
+
+%% dia 3-5 pag 20
+
+El kakari del punto 3-3 en 1 del Dia. 3 da a Negro la ocasión de construir una pared hacia el lado derecho con 2, pero entonces Blanco puede avanzar a lo largo del lado superior, comenzando con 3 en A, y así Blanco 1 es útil cuando Blanco desea privilegiar esa parte del tablero. El kakari del punto 3-4 en 1 del Dia. 4 no da a Blanco esta posibilidad de desarrollarse a lo largo del lado superior, pero mantiene el lado derecho abierto para él. Finalmente, Blanco a veces juega 1 en el Dia. 5, abandonando la esquina en aras del lado derecho.
+\stopsection
+
+\startsection[title={Ejemplo}]
+Veamos ahora las ideas desarrolladas precedentemente, en una apertura típica tomada de un juego profesional. En el ejemplo que hemos elegido, Negro comenzó haciendo inmediatamente un shimari con 1 y 3, mientras que Blanco jugó en las esquinas adyacentes con 2 y 4. Negro 5 ocupó la esquina vacía restante.
+
+En este punto Blanco, con sus piedras en los puntos 4-4 y 3-3, no tenía ningún shimari urgente que hacer, de modo que un kakari en la esquina inferior izquierda tuvo prioridad sobre cualquier otra jugada. Negro respondió con 7, un ataque de pinzas dirigido a prevenir que Blanco se extienda hacia el lado izquierdo. La secuencia de 7 a 11 es un joseki, en el que Blanco asegura su espacio para ojos zambulléndose en la esquina, mientras Negro se extiende hacia el lado inferior. Evaluando el resultado, usted debe advertir que aunque Negro 7 interfiere el camino de Blanco, es una piedra débil, y por el momento no contribuye a construir nada de territorio para Negro.
+
+%% dia pag 21
+
+Dado que no quedaba otro kakari o shimari importante para jugar, Blanco ahora hizo una extensión hacia el lado derecho, aproximándose tanto como se atrevió al shimari negro de la esquina superior derecha. El área en frente de un shimari es extremadamente valiosa durante la apertura, de modo que esta extensión era mejor que cualquier otra efectuada en distinta dirección, tanto desde Blanco 2 como desde Blanco 4.
+
+Luego siguió el kakari negro de 13, una manera lógica de ampliar el área negra en el lateral inferior. Después de la ocupación del lado derecho por parte de Blanco en 12, un kakari negro desde la dirección de A no habría servido de mucho. Si Negro hubiese ido directamente a 15 sin hacer previamente el intercambio 13-14, Blanco habría podido extenderse a B, consiguiendo una gran formación de doble ala alrededor de la esquina inferior derecha; es importante tratar de prevenir esa clase de desarrollo. Negro 15 marcó el final de esta etapa de la apertura.
+
+Este ejemplo no representa un patrón fijo. El Go no se ha analizado al punto de cubrir la totalidad de las posibilidades de apertura en toda la extensión del tablero, y probablemente nunca lo será. Tanto los profesionales como los aficionados, aún cuando puedan conocer muchas secuencias de joseki para utilizar en determinadas situaciones concretas, están igualmente librados a su suerte desde la primera jugada de la partida.
+
+Existen, sin embargo, maniobras estándares que ocurren en todas las aperturas, sin importar la disposición de las jugadas iniciales y sin importar los estilos personales de los jugadores. El resto de este capítulo se dedica a ellas, comenzando con la más importante, la extensión a lo largo del lateral.
+\stopsection
+
+\startsection[title={Extendiéndose sobre el lateral}]
+Puesto que ésta es la manera básica tanto para construir territorio como para obtener espacio para ojos, es la maniobra más importante de la apertura. Usted no puede construir territorio con una sola piedra, así como no puede construir un cerco con un solo poste. Extiéndase desde una piedra, sin embargo, y ya tendrá dos postes clavados en la tierra; entonces estará preparado para defender el área existente entre ellos.
+
+En materia de extensiones, hay dos cuestiones a considerar: qué tan lejos extenderse, y qué tan alto (es decir, a qué distancia del borde del tablero). La segunda cuestión se reduce generalmente a una opción entre la tercera y la cuarta líneas. La primera se decide en base a las fuerzas relativas de aquello {\it desde} y aquello {\it hacia} lo cual se está siendo extendiendo. El principio general es que debe jugarse cerca de las posiciones débiles y lejos de las fuertes.
+\stopsection
+
+\startsubsection[title={Extendiéndose en frente de un shimari}]
+Una vez que se ha hecho un shimari, una extensión desde éste, como en el Dia. 1, es una jugada importante. Aquí Negro 1 en el lateral derecho ha elegido la mejor dirección, porque es una extensión desde una pared de dos piedras. Sería aún más valiosa si Negro ▲ estuviera en A. Una extensión hacia la izquierda sobre el lado superior sería solamente una extensión desde ▲ , y tendría menos potencial territorial.
+
+En cuanto al alcance de la extensión, cabe preguntarse, ¿por qué Negro elige precisamente 1, en vez de llegar más lejos, o más cerca? Es ésta una pregunta difícil, pero siendo 1 el punto intermedio entre las posiciones negra y blanca, la respuesta parece natural. Otro argumento a su favor, es que mantiene un buen equilibrio entre su shimari y un eventual kakari negro en B. Negro 1 en B sería otra buena idea en esta posición.
+
+%% dia 1-2 pag 23
+
+Es tan valioso extenderse {\it hacia} el shimari del oponente, como hacerlo {\it desde} uno propio, y por consiguiente Blanco 1 en el Dia. 2 es tan grande como Negro 1 en el Dia. 1. Hemos mostrado a Negro respondiendo en 2; aunque no ha llegado tan lejos como quisiera, cualquier extensión en frente de un shimari es una jugada grande.
+
+¿Qué tan seguras son las áreas bosquejadas por las extensiones de los Dias. 1 y 2? Tal como están dispuestas, existe sitio para que cualquiera de ellas sean invadidas, de modo que no son en absoluto seguras; pero si se produce una invasión, el invasor se encontrará luchando en desventaja. Mientras tiene éxito quitando territorio en un lugar, sus operaciones le causarán pérdidas en otros lugares. Por ejemplo, si Blanco invade en C en el Dia. 2, Negro puede, mientras ataca, construir una posición fuerte alrededor de su piedra 2; respaldado por ésta, puede entonces retribuir la invasión de Blanco en D, infligiéndole tanto daño como él ha recibido, o más. Siempre existe la posibilidad de invasión detrás de una extensión larga, pero generalmente se necesitan ciertos trabajos preparatorios antes de que la invasión se convierta en una empresa provechosa. En muchos casos la invasión nunca se produce. Agregando ulteriormente más piedras a esta posición abierta, el jugador puede consolidarla gradualmente, eliminando la posibilidad de invasión, y asegurando el territorio al que aspiró.
+
+%% dia 3-5 pag 24
+
+Hasta ahora, hemos estado mostrando extensiones en la tercera línea, pero extensiones en la cuarta línea también son buenas, tal como Blanco 1 en el Dia. 3. La diferencia entre una extensión en la cuarta línea y una en la
+
+tercera es que el primera tiene más influencia hacia el centro, mientras que la última privilegia el territorio lateral. En el Dia. 3 existe cierto espacio entre Blanco 1 y el borde del tablero, que permite a Negro realizar una invasión del territorio delineado por Blanco.
+
+Pero la cuarta línea es el límite. En el Dia. 4 Blanco se ha posicionado demasiado lejos del borde del tablero, dejando una profunda brecha en A donde Negro puede introducirse. Negro también tiene franqueado el acceso a B.
+
+Esto no significa que usted no deba jugar sobre la cuarta línea durante la apertura. En el Dia. 5, por ejemplo, después de que Negro ya tomara el mejor punto sobre el lateral con 1, Blanco 2 sería una buena manera de restringir el potencial territorio negro. No obstante, Blanco preferiría tener invertidos los roles, con su piedra en el interior y la negra en el exterior. Para extenderse sobre los laterales, las líneas tercera y cuarta son las más convenientes.
+\stopsubsection
+
+\startsubsection[title={Construyendo una base}]
+%% dia 6-8 pag 25
+
+En el Dia. 6 Blanco necesita asegurarse espacio suficiente para la formación de ojos, y la extensión de dos puntos a 1 sobre la tercera línea es la mejor. Porque estando sus dos piedras tan cerca del borde como lo están, no hay manera de romper la conexión entre ellas. En el Dia. 7, por ejemplo, los esfuerzos de Negro solamente tienen por resultado una consolidación de la posición de Blanco.
+
+Si Blanco se extendiera más lejos, como en el Dia. 8, entonces Negro sí tendría espacio para invadir en 2. Existen varias posibilidades después de Negro 2, pero aún sin entrar a considerarlas, es fácil darse cuenta de que Blanco está en una posición peligrosa, y que va a tener que aceptar alguna clase de pérdida. No era bastante fuerte en esta área como para hacer una extensión de tres puntos.
+\stopsubsection
+
+\startsubsection[title={Una extensión estrecha}]
+Tal como se sugiere en el ejemplo anterior, la extensión mínima a lo largo de la tercera línea es la extensión de dos puntos, siempre que exista espacio suficiente para hacerla. En el Dia. 9, sin embargo, no hay bastante sitio, y Blanco tiene que limitarse a una extensión de un punto. Blanco 1 es demasiado estrecha para resultar tan valiosa como las otras extensiones que hemos estado viendo, pero así y todo continúa siendo una jugada bastante grande, en las postrimerías de la apertura, porque consolida la esquina de Blanco mientras amenaza una invasión en A. Negro generalmente debe defender en 2, a fin de prevenir tal invasión.
+
+%% dia 9-10 pag 26
+
+Blanco no debería extenderse hasta contactar la piedra negra. Si jugara 1 en el Dia. 10, en un ambicioso intento por obtener más provecho del que es posible, Negro respondería en 2 y conectaría en 4, resultando mucho más fortalecido de lo que estaba en el Dia. 9. Blanco 1 habría quedado sumergida bajo las jugadas de esta secuencia, y no estaría ejerciendo tanta influencia como Negro 2 o Negro 4.
+\stopsubsection
+
+\startsubsection[title={Extendiéndose desde una pared de dos piedras}]
+La extensión mínima desde una pared de dos piedras es la extensión de tres puntos, como se muestra en el Dia. 11. Aquí, Negro se limita al mínimo, porque Blanco tiene dos posiciones fuertes en esta parte del tablero, y podría invadir fácilmente si Negro se extendiera más lejos de 1. Nótese asimismo, que Negro está dejando lugar para una segunda buena extensión en A.
+
+¿Qué ocurre si Blanco invade la extensión de tres puntos, con 1 en el Dia. 12? Negro debe responder en 2, y aunque esta lucha puede ser complicada, Blanco está en desventaja y seguramene saldría de ella con un mal resultado. Su invasión fue prematura. Primero debería aproximarse a la formación negra en A –si tiene ocasión–, y recién entonces podría penetrar con eficacia en 1.
+
+%% dia 11-13 pag 27
+
+Si Negro hiciese solamente una extensión de dos puntos, como en el Dia. 13, Blanco podría presionarlo desde el exterior en 2. En el Dia. 13 las piedras negras encierran un territorio muy estrecho para ser eficientes, y de hecho, ni siquiera logran bastante espacio para asegurarse dos ojos.
+
+La extensión básica desde una pared de tres piedras es una extensión de cuatro puntos; y desde una pared de cuatro piedras, una extensión de cinco puntos, siempre que haya bastante espacio para hacerlas. En teoría, no hay un límite máximo para una extensión desde ninguna posición, a excepción de los límites impuestos por el tamaño del tablero. El siguiente diagrama nos brinda varios ejemplos prácticos de extensiones, tanto largas como cortas.
+
+%% dia 14pag 28
+
+La partida ilustrada en el Dia. 14, tomada de uno de los torneos profesionales japoneses, acaba de ingresar en la fase post-shimari. Negro comienza con una conservadora extensión de dos puntos sobre el lateral izquierdo hasta 1, para asegurar una base para su piedra de la esquina superior izquierda. Blanco se aprovecha de ese conservadurismo, intercambiando 2 por 3, forzando a Negro a una formación sobrecargada, según lo explicado en la página anterior. Blanco 4 impide a Negro hacer lo que sería una poderosa jugada en A. Usted podría preguntarse por qué Blanco no se extiende una línea más lejos hacia la derecha, pero en esta posición es mejor hacer una extensión fuerte, que proteja su punto débil, dejando una extensión más largo para más adelante.
+
+Negro ahora tiene {\it sente}, y se extiende hacia el shimari de Blanco con 5 en el lado inferior, dejando espacio para la siguiente extensión a 7. Blanco por su lado avanza hacia el shimari negro con 6, eligiendo ---naturalmente--- la segura extensión de dos puntos. Pero con 8 y 10, Blanco posibilita la ampliación de sus límites, toda vez que está respaldado por posiciones estables en los lados derecho y superior, y que está aproximándose a una posición negra relativamente débil en la esquina superior derecha. Blanco 8 es al mismo tiempo una extensión y un kakari.
+
+Tome nota de las prioridades seguidas en esta partida: primero, una extensión para asegurar una base para una piedra aislada; luego, extensiones enfrente del shimari; y luego, otras extensiones. Tanto las jugadas de Negro como las de Blanco demuestran una estrategia sensata.
+
+Ahora presentamos un problema para que usted resuelva: Negro, en el diagrama de abajo, ha invadido el lado inferior con el kakari en 1, y Blanco ha hecho la respuesta de joseki en 2. El siguiente movimiento de Negro depende de usted; haga su elección, y después dé vuelta%revisar
+ la página.
+
+%%prob pag 29
+
+%% resp dia 1 pag 30
+
+La respuesta es una extensión de dos puntos en la tercera línea, según se muestra en el diagrama de arriba. Nada es tan importante como lograr una base segura para la piedra negra de la esquina inferior izquierda, y Negro 1 es la única jugada buena para cumplir esa misión. Cuando decimos “base segura”, no significamos que estas dos piedras sean invulnerables a cualquier clase de asalto que pueda acaecer en el futuro; pero por el momento, Negro está suficientemente atrincherado. Blanco tiene sus ojos puestos en una contra-extensión a A, precedida ---como cuestión de buena técnica---, por el intercambio de Blanco B por Negro C; pero Blanco A es demasiado estrecha para ser valiosa en esta instancia. Aunque implicaría una suerte de ataque, Negro podría ignorarla.
+
+%% dia 2-3 pag 30
+
+Negro 1 en el Dia. 1 es una extensión demasiado pequeña. Comportándose innecesariamente de este modo, Negro solamente está invitando a Blanco 2, que puede hacerse tanto ahora como en el futuro cercano, dejando a Negro con insuficiente espacio para ojos.
+
+Negro 1 en el Dia. 2, en cambio, se excede una línea más de lo conveniente, extendiéndose demasiado lejos y atentando contra su propia seguridad. Blanco puede hacer bastante daño invadiendo enseguida con 2, e incluso si juega en otra parte, la sola posibilidad de invadir más adelante, es una terrible imperfección en la formación de Negro.
+
+Si Negro juega en la cuarta línea, como en el Dia. 3, quizás en la equivocada creencia que debe apuntar hacia el espacio abierto enmarcado por la pared blanca de la parte inferior derecha, Blanco no tomará inmediata ventaja de su error, sino que se extenderá hacia arriba sobre el lado izquierdo. La posición negra queda un poco inestable: Blanco A la amenazaría ---y mientras lo hace incrementa su territorio a la izquierda---, además de dejar un punto débil en B, que Blanco puede explotar jugando en C.
+
+Veamos ahora otro problema: después de la jugada correcta de Negro ( ▲ en el diagrama de abajo), Blanco debe hacer una extensión en el lado izquierdo. Como prueba de su juicio, elija un punto en la tercera línea, y luego mire la explicación de las dos páginas siguientes.
+
+%% p2 pag 31
+
+%%vres dia 1-2pag 32
+
+Blanco 1 en el diagrama de arriba a la izquierda es la mejor respuesta. Esto es un poco difícil de probar –en este caso lo bueno y lo malo no están tan claramente definidos como en el problema anterior–, pero nótese que Blanco está dejando espacio para una segunda extensión a A. Está seguro de legar tan lejos como 1, porque tiene esa posible segunda extensión delante, y porque las dos piedras que tiene a sus espaldas, no están en ningún peligro inminente de ser atacadas.
+
+Blanco 1 en el Dia. 1 es casi tan buena; si ésta fue su elección, aún puede estar satisfecho de su intuición para medir el largo de una extensión. La única leve objeción que puede hacérsele, es que deja a Negro un poco más de espacio del que realmente es necesario. Negro jugará 2 sin demora.
+
+Teniendo esto en consideración, puede concluirse que cuanto más retraiga Blanco su extensión, peor será el resultado. Después de Blanco 1 en el Dia. 2, Negro estará sumamente complacido en hacer una contraextensión de cuatro puntos con 2. En Go, los mansos no heredan la Tierra.
+
+Por el contrario, Negro 2 en el Dia. 3 muestra qué puede sucederle a Blanco si va demasiado lejos; tan sólo una línea más allá de la distancia correcta, constituye un serio error. Blanco solamente tiene espacio para una extensión de un punto a 3, mientras que Negro puede hacer una apropiada extensión de dos puntos a 4, y es fácil ver quién queda mejor parado luego de este intercambio. Una manera más apropiada de contrarrestar ese error inicial, después de que Negro 2 lo haya puesto de manifiesto, es atacar con Blanco 3 en el Dia. 4, originando una carrera hacia el exterior con las jugadas de 4 a 10; pero aún así, el resultado no es bueno para Blanco. La punta de lanza negra arrojada hacia el centro del tablero, reduce enormemente la utilidad de la pared blanca de la esquina inferior derecha, mientras que Blanco 1 a 9 carecen de un efecto muy fuerte contra el shimari negro de la esquina superior izquierda. También podría arribarse a esta secuencia, si Blanco jugara 1 en 3 y Negro se contra-extendiera a 2.
+
+%% dia 3-4pag 33
+
+
+\stopsubsection
+
+\startsection[title={Ataques de pinzas}]
+Un ataque de pinzas es una jugada que ataca una piedra enemiga privándola del espacio necesario para extenderse a lo largo del lateral. La función de un ataque de pinzas es impedir que el oponente consiga territorio y establezca una base para la formación de ojos. Esta clase de jugada es óptima cuando trabaja en combinación con otras piedras amigas, para construir territorio al mismo tiempo que se ataca.
+
+%% dia 1-2 pag 34
+
+Blanco 1 en el Dia. 1 es una jugada de pinzas ideal, puesto que también resulta ser una extensión desde el shimari de la esquina inferior derecha. Negro ahora no tiene territorio ni espacio para ojos en el borde del tablero, de modo que si va a poner su piedra en movimiento, no le queda más lugar para extenderse, que subiendo hacia el centro, donde enfrenta un futuro incierto.
+
+Negro exhalaría un suspiro de alivio si pudiera extenderse a 1 en el Dia. 2, fortaleciendo su posición, al menos por el momento, y tomando posesión del territorio del borde que en el Dia. 1 era de Blanco. La diferencia entre estos dos diagramas es enorme.
+
+%%dia 3-4 pag 34
+
+Los ataques de pinzas son habituales puntos de partida para el joseki, especialmente en respuesta a un kakari contra una piedra en el punto 3-4. Negro 1 en el Dia. 3 es típico. Nuevamente, la idea básica es que Blanco no tiene suficiente espacio para formar dos ojos en el borde del tablero, de modo que debe huir hacia el centro. Su esperanza es poder contraatacar a una u otra de las piedras negras que lo encierran. Negro A y B, en vez de 1, son otros dos posibles ataques de pinzas en esta posición. Incluso Negro C podría considerarse ataque de pinzas, aunque no lo es tanto, puesto que deja a Blanco espacio suficiente para hacer una extensión de dos puntos hasta A.
+
+Los ataques de pinzas también pueden hacerse en la cuarta línea, como 1, A o B en el Dia. 4. Un ataque de pinzas en la cuarta línea deja al oponente cierto espacio para moverse en las proximidades del borde, mientras que
+
+uno en la tercera línea es susceptible de recibir presión desde arriba. Para hacer más patente esta idea, e ilustrar algunas maneras de tratar una jugada de pinzas, aquí hay dos de los joseki a los que pueden conducir los Dias. 3 y 4.
+
+%% dia 5-6 pag 35
+
+En el Dia. 5, donde Negro ▲ está en la cuarta línea, Blanco salta a 1, luego hace una contra-pinza en 3. Cuando Negro salta a 4, Blanco puede conectarse por debajo jugando 5, logrando una posición estable. Ésta es una posible terminación para el joseki.
+
+En el Dia. 6, donde Negro ▲ está en la tercera línea, Blanco nuevamente juega en 1, pero ahora después de Negro 2, golpea desde arriba con 3, y Negro corre a lo largo del borde del tablero mientras Blanco se difunde hacia el centro. Blanco sale de este joseki sin territorio definido, pero Negro por su parte tampoco ha obtenido demasiado, y cualquiera de ambas posiciones siguen siendo vulnerables al ataque.
+
+%d7-9 p35
+
+En el Dia. 7, Negro generalmente contesta el kakari de Blanco extendiéndose a A, pero hay veces en que, por una razón u otra, no se defiende. Blanco puede entonces aproximarse desde el otro lado jugando 3. Aunque este ataque de pinzas no impide a Negro hacer dos ojos en la esquina, si juega 1 en el Dia. 8 –lo que le proporciona una formación viva–, Blanco lo cercará con 2. Este intercambio de un pequeño territorio en la esquina por una pared exterior, resulta generalmente favorable a Blanco, puesto que sus piedras tienen potencial para desarrollarse, mientras que Negro no tiene prácticamente ninguno. Negro usualmente juega 1 en 2, A, o B, y lucha por una salida al exterior, aunque el joseki resultante le asegura de algún modo la esquina a Blanco.
+
+El Dia. 9 muestra un ejemplo similar en el cual la piedra negra está en el punto 3-4. Después de Negro 8, Blanco puede extenderse desde 1 por debajo de la pared de Negro, y éste quizás, atacaría a Blanco 3-5-7, con una jugada de pinzas desde arriba, sobre el lado izquierdo.
+
+Las extensiones son las unidades constructivas básicas durante la apertura; los ataques de pinzas son las armas ofensivas básicas; y las jugadas que son al mismo tiempo extensiones y ataques de pinzas, son las ideales. Éste es un principio estratégico fundamental. Asimilarlo cabalmente, vale mucho más que un conocimiento detallado de joseki, o de cualquiera de las otras técnicas presentadas en este libro.
+\stopsection
+
+\startsection[title={Invasiones}]
+Blanco 1 en el Dia. 1 desembarca entre dos posiciones negras, y es por lo tanto una invasión. Tanto una jugada negra como blanca en 1 es extremadamente grande. Si Negro jugara 1 primero, extendiéndose desde dos esquinas simultáneamente, Blanco no podría establecerse con facilidad en el lado izquierdo, que podría caer enteramente en manos de su oponente. En el Dia. 1, sin embargo, Blanco tiene una posición segura de la que no puede ser desalojado. Si Negro lo amenaza desde abajo con 1 en el Dia. 2, Blanco tiene espacio suficiente para extenderse hacia arriba a 2. Si Negro se acerca desde arriba, como en el Dia. 3, Blanco tiene espacio suficiente para extenderse hacia abajo. Esto hace de Blanco 1 en el Dia. 1 una jugada irreprochable.
+
+%d1-3 p37
+
+El Dia. 2, eventualmente, es mejor para Negro que el Dia. 3. En el Dia. 2, Negro 1 es una buena extensión desde la esquina inferior, y Negro aún puede hacer buen uso de su piedra en la esquina superior, jugando 3 en A, por ejemplo. En el Dia. 3, en cambio, Blanco ha acampado en el fértil terreno existente delante del shimari, y no hay nada que Negro pueda hacer al respecto. La posición negra de la esquina superior todavía está abierta a una invasión en A y B, y será difícil para éste lograr una formación satisfactoria para sus piedras.
+
+Cuando se ha hecho una formación de doble ala en torno a una piedra situada en el punto 4-4 ---una estructura muy deseable---,siempre es factible invadir en el punto 3-3, como se muestra en el Dia. 4. Esto a veces es una buena idea, y otras veces no; cuando Blanco está en condiciones de atacar alguna de las dos alas ---y también en otras circunstancias---, puede resultar mejor un kakari desde la dirección apropiada, y luchar en el exterior. Blanco 1 en el punto 3-3, sin embargo, tiene la virtud de que en cualquiera de las varianes de joseki que le siguen, Blanco rápidamente logra una estable configuración viva. Si Blanco no invade esta formación de doble ala de alguna manera, Negro puede fortificar la esquina jugando en A, y entonces el trabajo de Blanco será mucho más arduo.
+
+%d4-5 p38
+
+El Dia. 5 muestra la contrapartida de esta formación, en la que la piedra
+negra de la esquina está en el punto 3-3. Esta vez no debe vacilarse en jugar
+Blanco 1, un importante movimiento para prevenir la construcción de un
+shimari. Negro conseguirá algún territorio alrededor de los bordes, mientras
+Blanco vivirá en el centro.
+
+%d6 p38
+
+El Dia. 6 introduce otra clase de situación en la que una invasión resulta
+práctica. Esta vez Blanco no tiene suficiente espacio en el lateral para ase-
+gurarse una vida fácil, pero está haciendo un ataque de pinzas al mismo
+tiempo que una invasión, y Negro ▲ tiene aún menos espacio que Blanco 1.
+Esto hará difícil para Negro dominar a Blanco 1; si lo intenta, Blanco tiene
+muchas maneras de defenderse.
+
+La fuerza relativa de Blanco 1 y Negro ▲ es la clave de este ejemplo, y
+si Negro ▲ no estuviera tan inseguro, Blanco 1 no sería tan buena jugada. Y
+si las piedras negras de la esquina inferior fueran más débiles, entonces
+Blanco 1 sería aún mejor.
+
+Mientras miramos esta posición, note el emplazamiento de Blanco 1.
+Blanco A, en la tercera línea, también sería correcto; pero no debería jugar-
+se ni más arriba ni más abajo que cualquiera de estos dos puntos. Si invade
+en 1 en el Dia. 7, con la intención de atacar más agresivamente a Negro ▲ ,
+Negro simplemente se extenderá a 2 –un buen ejemplo de juego liviano–, y
+su beneficio será mayor que el de Blanco.
+
+%d7 p39
+
+Si se hace una invasión en un área que no dispone de suficiente espacio
+para la formación fácil de ojos, y la invasión no actúa al mismo tiempo co-
+mo un ataque de pinzas, entonces el invasor va a encontrarse en dificulta-
+des. Incluso si su fuerza invasora consigue sobrevivir, sus esfuerzos para
+lograrlo le provocarán tanto daño a sus propias posiciones en otras partes
+del tablero, como al territorio de su oponente. Tales invasiones son contra-
+rias al sentido común durante la apertura, y aunque a veces son necesarias,
+generalmente son incorrectas.
+\stopsection
+
+\startsection[title={Extendiéndose hacia el centro}]
+Tanto los ataques de pinzas como las invasiones tienden a forzar el jue-
+go hacia el exterior, y por ésta y otras razones, las extensiones hacia el cen-
+tro del tablero llegan a ser tan comunes durante la apertura como las exten-
+siones sobre los laterales. Suelen tener importantes implicancias ofensivas y
+defensivas, y a veces sirven directamente para construir territorio.
+
+En cuanto a la distancia de tales extensiones hacia el centro del tablero,
+ha de tenerse presente que no es seguro llegar tan lejos como lo era sobre
+los laterales. Las herramientas básicas son ahora el salto de un punto, la ju-
+gada diagonal, y el keima, que estudiaremos en ese orden.
+
+\startsubsection[title={El salto de un punto}]
+El Dia. 1 muestra una situación hipotética de apertura. Después de que
+Negro haya tomado el punto ideal entre los dos shimari, y Blanco ya ha
+hecho su contra-extensión en 2, el siguiente orden de operaciones para Ne-
+gro en esta parte del tablero es hacer un salto de un punto a 3. Blanco hace
+lo propio con 4. Si Negro no jugara 3, Blanco encontraría un modo fácil de
+eliminar el potencial territorio negro sobre el lateral, invadiendo en A; en
+cambio, después de 3, a Blanco no le queda mejor alternativa que reducir el
+territorio negro jugando en B (que Negro puede contestar en A).
+
+%d1 p40
+
+Si Blanco no jugara 4 en el Dia. 1, entonces Negro podría hacer otro sal-
+to de un punto, según se muestra en el Dia. 2, forzando a Blanco a una posi-
+ción baja y ampliando su influencia con miras al lateral izquierdo. Blanco
+debe retirarse pacientemente a 2 y esperar una ocasión para asomarse al
+punto débil de Negro en A.
+
+%d2 p41
+
+¿Qué tal si Negro hiciera un salto de dos puntos, como en el Dia. 3? El
+inconveniente de esta jugada deriva de la facilidad con que Blanco puede
+romper la conexión entre 1 y 3, de modo que Negro estaría obligado a forta-
+lecer su extensión con una tercera piedra, y eso no sería muy eficiente. Si
+Blanco juega A, por ejemplo, Negro será puesto en el difícil trance de de-
+fender su territorio en el lateral, y simultáneamente prevenir que Negro 3
+sea cortado.
+
+%d3 p41
+
+Sin embargo, desde una pared de dos piedras, generalmente es posible
+extenderse hacia el centro con un salto de dos puntos ---en el Dia. 4 vemos a
+Negro agrandando su territorio con tal movimiento---; y desde una pared de
+tres piedras, un salto de tres puntos puede ser seguro.
+
+%d4-5 p41
+
+Existen algunos conocidos joseki de pinzas en los que se hace un salto
+de dos puntos hacia el centro desde una sola piedra. En el Dia. 5, por exa-
+minar sólo uno de ellos, Blanco 2 es una respuesta popular para Negro 1,
+aunque el salto de un punto (Blanco 2 en 3), también es admisible. No signi-
+fica que Blanco 2 no pueda ser cortado ---Negro 3, 5 y 7 muestran que sí
+puede serlo--- pero si Negro juega la variante del corte, Blanco podrá tomar
+represalias lanzando un poderoso ataque contra Negro 1.
+
+Pero la respuesta estándar ---si existe tal cosa--- a un ataque de pinzas, es
+el salto de un punto, no el de dos puntos. Dos ejemplos de ello ya se han
+mostrado en la página 35. El Dia. 6 muestra un tercero, en el que Negro res-
+ponde a Blanco 1 saltando a 2. Así, al mismo tiempo que corre por su vida,
+está amenazando al grupo blanco de la izquierda, y Blanco tiene que defen-
+derse en 3, induciendo a Negro a saltar nuevamente hasta 4.
+
+%d6 p41
+\stopsubsection
+
+\startsubsection[title={La jugada diagonal}]
+Blanco 2 en el Dia. 1 es una jugada diagonal. Es más lenta que el salto
+de un punto, pero es más fuerte, y en el caso particular ilustrado en este dia-
+grama, es una respuesta estándar. Además de salir corriendo hacia el centro,
+Blanco está apuntando a atacar en A o B, al tiempo que impide a Negro co-
+nectar sus dos piedras.
+
+Si Blanco hiciera un salto de un punto, como en el Dia. 2, Negro jugaría
+en 3, y no habría manera de que Blanco cortara la posición negra, hecho que
+usted mismo puede comprobar. En cambio, si Negro intentara hacer esta
+conexión después del Dia. 1, fallaría, según se muestra en el Dia. 3. Blanco
+sacrifica una piedra en 2, para dirigirse hacia abajo con 4 y 6; luego conti-
+núa como en el Dia. 4, y las burdas tácticas de Negro han conferido a Blan-
+co un resultado superior.
+
+Este mismo esquema aparece, con distinto emplazamiento, en el Dia. 5,
+donde Negro acaba de invadir en 1. Blanco 2 lo corta y se mueve hacia el
+centro, anunciando una carrera entre ambos.
+
+%d1-5 p43
+
+El Dia. 6 nuevamente muestra la jugada diagonal en acción, esta vez lle-
+vando un resuelto ataque contra Blanco ∆ . Blanco puede huir ---como se
+muestra en el Dia. 7---, pero Negro lo presiona en sente hasta 8; luego juega
+10, construyendo cierto espacio para ojos para su propio grupo.
+
+%d6-8 p43
+
+En esta clase de posición siempre es una cuestión difícil determinar si es
+mejor la jugada diagonal o el salto de un punto, y de hecho Negro también
+podría jugar 2 en el Dia. 8. Esto último permitiría a Blanco un escape algo
+más fácil que antes, pero no es necesariamente incorrecto. También existe la
+posibilidad de que Blanco logre cierta conexión por debajo en A (le deja-
+mos a usted la comprobación). Negro puede prevenirla intercambiando B
+por C, pero no está muy dispuesto a hacerlo, porque fortalecería la posición
+de Blanco y lo privaría de ulteriores jugadas como D y E.
+\stopsubsection
+
+\startsubsection[title={El keima}]
+Blanco 1 en el Dia. 1 es un {\it keima}. Esta palabra se tomó prestada del
+juego japonés del Shogi, donde designa la pieza análoga al caballo del Aje-
+drez, y en algunas obras occidentales sobre Go, se lo llama justamente {\it salto
+de caballo}.
+
+La idea subyacente tras el keima de Blanco en 1 es empujar a Negro
+hacia el borde del tablero; esto es, hacer que juegue A en la segunda línea.
+Blanco 1 es mejor que el salto de un punto a B, que dejaría a Negro exten-
+derse en la tercera línea sin dificultad. En este joseki, Negro juega general-
+mente 2 en C.
+
+%d1-2 p44
+
+El keima es una jugada que debe hacerse con cuidado, puesto que fre-
+cuentemente puede ser cortado. Negro 1 y 3 muestran la maniobra básica de
+corte. Si bien en este caso particular el corte no es muy efectivo (porque aún
+cuando Blanco no pueda capturar a Negro 1 con una escalera en A, igual-
+mente obtiene una posición más ventajosa después de jugar 4), queda evi-
+denciado de qué hay que cuidarse.
+
+Un uso común del keima es para avanzar desde la tercera a la cuarta lí-
+neas, en respuesta a un “sombrero”. En el Dia. 3, por ejemplo, Negro 1
+apunta a construir un gran territorio en el cuadrante inferior izquierdo del
+tablero. Blanco tiene que introducirse en esta área, y su keima en 2 es la ju-
+gada apropiada para realizar ese trabajo (si no fuera tan crucial para Blanco
+moverse hacia arriba, entonces una extensión de un punto a A en la tercera
+línea, sería una jugada más fuerte).
+
+%d3 p45
+
+Puesto que este keima está tan cerca del borde del tablero, no puede ser
+cortado como el anterior, pero, reiteramos, hay un punto débil entre las dos
+piedras blancas que Negro puede explotar, como se muestra en el siguiente
+diagrama. Negro sacrifica una piedra en 1, corta en 3, juega atari con 5 y 7,
+y crea confusión en el lateral inferior al iniciar una lucha de ko. Blanco no
+debe tratar de evitar el ko jugando 6 en 7, porque dejaría a Negro una buena
+jugada ofensiva en A. Cualquiera sea el resultado de esta escaramuza, sirve
+para ilustrar el hecho de que el keima siempre es una jugada con una debili-
+dad.
+
+%d4 p45
+
+%d5 p46
+
+Otros típicos usos del keima pueden verse en el Dia. 5. Este juego co-
+menzó con un complicado joseki en la esquina inferior derecha, que dejó a
+ambos contendientes con un grupo débil en el centro. Cuando Blanco co-
+nectó en 1, Negro jugó su keima en 2. Aunque este movimiento dejaba
+abierta la posibilidad de una invasión entre 2 y Negro ▲ , era mejor para Ne-
+gro pisarle los talones al grupo débil blanco jugando 2 en la cuarta línea,
+que hacer una más fuerte ---pero conservadora--- extensión en A.
+
+Ahora Blanco jugó 3 para salir a respirar, medida urgente que tuvo que
+adoptar antes de pensar siquiera en invadir el lado inferior o de atacar en
+cualquier otra parte del tablero. Este keima, al estar respaldado tanto por
+Blanco 1 como por Blanco ∆ , no podría ser cortado. Y puesto que envolvió
+al grupo negro débil del centro, Negro tuvo que hacer su propia extensión, y
+eligió 4. Esta clase de extensión en el centro a veces resulta incomprensible
+para los jugadores inexpertos, porque no parece tener efecto en la construc-
+ción de territorio, así que deseamos asegurarnos de que el lector entienda las
+razones para hacerla. En primer lugar, redujo la presión ejercida sobre el
+grupo negro del centro. Otras extensiones, más cercanas al lado derecho,
+también lo habrían hecho, pero Negro 4 tenía la virtud, en segundo lugar, de
+devolver cierta presión sobre el grupo blanco del centro, no mucha, quizás,
+pero la suficiente para disuadir a Blanco de arriesgar una inmediata invasión
+del lado inferior. Por lo tanto Blanco jugó 5, y el tercer propósito de Negro
+4 se puso de manifesto: a saber, que permitió a Negro jugar 6, bloqueando a
+Blanco en el lado derecho y obteniendo allí un tangible beneficio.
+\stopsubsection
+
+\startsection[title={Empujar y arrastrarse}]
+El Dia. 1 de abajo nos da un ejemplo de otra de las maniobras estándares
+de apertura. Negro ha jugado keima en 1 y está empujando a Blanco a lo
+largo del lateral, aislando más a Blanco ∆, y sentando las bases de un gran
+territorio exterior. Blanco, por su parte, al arrastrarse a lo largo de la tercera
+línea, está ganando territorio seguro en el borde.
+
+%d1-2 p47
+
+El Dia. 2 muestra una versión idealizada de esta situación. Considerados
+en sí mismos, el territorio blanco de tercera línea, y la pared exterior negra,
+poseen un valor equivalente, aunque en un juego real esta posición sería
+probablemente favorable a un bando o al otro, dependiendo de la aptitud
+que tenga Negro para utilizar su pared en la construcción de territorio, o
+bien para atacar. No obstante, esta versión idealizada no podría producirse
+en un juego real, puesto que en una batalla de empuje y arrastre, uno de los
+bandos siempre está un paso adelante del otro, y la competencia por lograr
+esa posición privilegiada, produce rupturas y desvíos que discontinúan esas
+rectas perfectas.
+
+El jugador que vaya a la zaga en una batalla de empuje y arrastre, siem-
+pre intentará saltar y adelantarse. Por ejemplo, en el Dia. 1 Blanco era quien
+iba detrás, y su siguiente jugada, si va a mantener su derrotero a lo largo del
+lado izquierdo, debe ser Blanco 6 en el Dia. 3, saltando una línea delante de
+Negro. Si Negro contesta a Blanco 6, Negro A, B, o C serían correctas. Si
+Negro no contesta, entonces Blanco puede comenzar a empujar hacia dere-
+cha, como en el Dia. 4, ampliando su influencia en nuevas direcciones,
+mientras fuerza a Negro hacia una formación apretada. Si, por el contrario,
+Blanco no juega 6 en el Dia. 3, entonces Negro 1 en el Dia. 5 lo para en se-
+co, y coloca a Negro en posición de construir territorio en todas las direc-
+ciones. El valor de las jugadas en estos tres diagramas depende de la situa-
+ción existente en los alrededores, pero hablando en términos generales, to-
+das son de una enorme importancia.
+
+%d3-8 p48
+
+El jugador que esté al frente en una batalla de empuje y arrastre, intenta-
+rá aprovechar su ventaja cuanto antes, con una jugada conocida como {\it hane}
+(pronunciada “jane”), delante de las piedras de su oponente. En el joseki del
+Dia. 6, por ejemplo, Negro no pierde tiempo en jugar hane en 4, forzando a
+Blanco a descender a la segunda línea. Nótese, sin embargo, que juega en
+línea recta en 8, en vez de intentar un segundo hane en A, puesto que Negro
+A dejaría demasiados puntos de corte de los que Blanco podría sacar rédito.
+
+Blanco, por su parte, no desea arrastrarse a lo largo de la segunda línea
+más allá de lo necesario, de modo que en vez de continuar con A, juega 9 y
+11 en el Dia. 7. Puede hacerlo en sente, puesto que el punto de corte en B
+fuerza a Negro a conectar en 12. Blanco ha ido suficientemente lejos a lo
+largo de la segunda línea, de modo que Negro no puede jugar A en sente;
+así que si Blanco desera arrastrarse más lejos por el lado izquierdo en el fu-
+turo, tendrá ocasiones suficientes para hacerlo.
+
+El Dia. 8 muestra otra variación de este joseki, en la que Negro juega un
+segundo hane con 1, en vez de jugar 6 en el Dia. 6. Aunque 1 se convierte
+en una piedra de sacrificio, Negro consigue hacer una sólida pared con 3 y
+5, y Blanco ya no puede estar seguro de jugar A en sente.
+
+Muchos joseki involucran empujes y arrastres de un modo u otro; el Dia.
+9 muestra otro de ellos. Negro primero salta a 4 para conseguir adelantarse
+un paso a su oponente; luego, sin pérdida de tiempo, dobla hacia arriba con
+8 y 12. Su posición parece estar llena de puntos de corte, pero sorprenden-
+temente Blanco puede obtener poca ventaja de ellos.
+
+%d9-10p49
+
+En el Dia. 10 puede verse la aplicación de este joseki en una partida real.
+Después de las jugadas desde Blanco 8 hasta Negro 19, que reproducen la
+secuencia del Dia. 9, Blanco termina con sus empujones, cortando en 20,
+forzando Negro 21, y luego juega 22. Esto es todo lo que puede hacer con
+todos los puntos de corte que están a su disposición. Negro juega atari en
+23, ofreciendo en sacrificio a 1 y 9 a cambio de Blanco 18.
+
+Este hipotético intercambio se ilustra en el Dia. 11, donde para mayor
+claridad hemos quitado del tablero la piedra blanca capturada. El beneficio
+obtenido por Blanco en la esquina no es poca cosa ---podríamos estimar el
+valor de Blanco 1 en unos 20 puntos veinte puntos---, pero la captura de Ne-
+gro desvirtúa totalmente la pared de Blanco, y al mismo tiempo irradia su
+influencia hacia el resto del tablero, y por lo tanto es aún más valiosa.
+
+%d11-12 p50
+
+La partida real continuó como se muestra en el Dia. 12, con Blanco y
+Negro salvando sus piedras en 24 y 25 respectivamente, reanudándose lue-
+go los empujones hasta Blanco 40. Negro jugó 41, porque no podía permitir
+que Blanco tomara ese punto y comenzara a construir una segunda pared.
+Con esto, el juego ingresó en otra fase. En el lado izquierdo, Negro tenía
+aproximadamente cincuenta puntos de territorio en el borde, pero la pared
+de Blanco, en cooperación con sus dos piedras marcadas ∆ , le confirió una
+posición equivalente.
+
+En este momento usted ya debe tener una acabada idea de lo que signifi-
+ca empujar y arrastrarse. Para ayudarle a refinar su técnica en esta importan-
+te parte del juego, vamos a terminar esta sección trabajando con algunos
+ejemplos más.
+
+En el Dia. 13 (otro joseki), vemos una posición en la cual Blanco se ha
+ido arrastrando a lo largo de la cuarta línea. Ésta es una línea ventajosa so-
+bre la cual arrastrarse, pero a pesar de eso, si es el turno de Blanco, debe ju-
+gar el keima en 1, resignando altitud por velocidad. Si es el turno de Negro,
+entonces A es una jugada grande.
+
+Si Blanco avanzara pesadamente con 1 en el Dia. 14, Negro lo empuja-
+ría hacia el borde del tablero con el doble hane de 2 y 4. Aunque pareciera
+que Negro corre un gran riesgo al dejar abiertos dos puntos de corte, lo me-
+jor que Blanco puede hacer es jugar 5, dejando a Negro conectar en 6. Esto
+es ---claramente--- mucho peor para Blanco, que lo mostrado en el diagrama
+anterior.
+
+%d13-15 p51
+
+Si Blanco intenta resistir, en vez de dejar a Negro conectar, su jugada
+más fuerte es 1 y siguientes en el Dia. 15, pero Negro 10 amenaza A y B, y
+Blanco ha fracasado. Incluso si la escalera no funciona, de modo que Blan-
+co pueda capturar tres piedras negras jugando C, la secuencia de Negro A,
+Blanco D, Negra E, otorga a Negro la fuerte pared externa que está buscan-
+do.
+
+Hasta ahora hemos estudiado el empuje a lo largo del borde; es hora de
+mostrar el empuje hacia el centro. Blanco 1 en el Dia. 16 se juega tanto para
+desarrollar la piedra débil ∆ como para atacar a Negro ▲ . Negro empuja por
+detrás con 2 y 4, y luego acelera con un keima a 6. Blanco también salta
+hacia adelante, a 7, y Negro regresa para garantizarse cierto espacio para
+ojos, jugando 8. Más adelante, A será el punto clave en el centro para
+quienquiera que desee proseguir la carrera. Esta clase de vuelo conjunto
+hacia el centro en busca de libertad, es habitual en la apertura y el temprano
+medio juego, y hemos observado ya algunas otras variaciones del mismo.
+
+%d16 p52
+
+Cerramos esta sección estudiando un caso más de batalla de empuje y
+arrastre en el centro del tablero. En el Dia. 17, Negro desea fervientemente
+ocupar el punto 7, haciendo una buena extensión desde su piedra ▲ , evitan-
+do una pinza blanca, y atacando las dos piedras blancas de la esquina supe-
+rior izquierda. Primero, sin embargo, juega el agresivo doble hane de 1 y 3.
+El intercambio que sigue hasta 9, deja a Blanco con una fuerte e influyente
+posición central; Negro, por su parte, ha tenido que hacer dos movimientos
+en el lado superior, y le ha quedado cierta chance de poner a trabajar a 3 en
+el futuro. Esta secuencia entera será examinada en los cinco diagramas si-
+guientes.
+
+Para comenzar, si Negro juega 1 en el Dia. 18 sin efectuar ningún mo-
+vimiento preparatorio, Blanco saltará a 2. Esto no parece diferir demasiado
+de la secuencia anterior, pero ahora Blanco se está desarrollando fácilmente,
+y las piedras negras marcadas ▲ están mucho más débiles de lo que estaban
+después de Blanco 6 en el diagrama anterior.
+
+%d17-18 p53
+
+Después de los intentos de Negro para empujar a Blanco hacia el lateral
+con 1 en el Dia. 19, Blanco puede sentirse inclinado simplemente a exten-
+derse hacia abajo a 2, pero entonces Negro 3 fuerza a Blanco 4, y cuando
+Negro ataca con 5, tiene una considerable fuerza y mayor potencial territo-
+rial en el centro. En vez de aceptar esto, Blanco debe empujar hacia atrás
+jugando 2 en 3.
+
+%d19-20 p54
+
+Ahora es Negro quien debe evitar un juego demasiado distendido. Si se
+limita a continuar con 3 y 5 en el Dia. 20, entonces, después de Blanco 6 y
+Negro 7, el lado blanco es mucho mayor que en el último diagrama, y Ne-
+gro no tiene ni por asomo las perspectivas de expansión hacia el centro que
+tenía antes. Además, si a Blanco no le importa ser atacado a la izquierda,
+puede jugar 6 en el Dia. 21, y Negro no habrá conseguido absolutamente
+nada en el lado superior.
+
+%d21 p54
+
+Así pues, resulta imperativo para Negro jugar el doble hane de 3 en el
+Dia. 22, y después del atari en 4, Blanco tiene que defenderse con 6. Negro
+es recompensado por su táctica enérgica construyendo su posición en sente,
+de modo que cuando finalmente se produce su ataque en 7, éste adquiere
+una mayor virulencia. Blanco 4 es una piedra más importante que los dos de
+la esquina ---que están vivas pero ya no tienen muchas posibillidades de desarrollo---, así que después el intercambio de Blanco A por Negro B, continúan las jugadas de construcción de ojos por parte de Blanco.
+
+%d22 p55
+\stopsection
+\stopchapter
+
+\startchapter[title={Capítulo II. Nueve conceptos}]
+\startsection[title={Que sus piedras trabajen cooperativamente}]
+Usted probablemente pueda imaginarse cómo fueron jugadas las primeras doce piedras en la partida del Dia. 1. Negro ha hecho un shimari y se ha extendido hacia abajo sobre el lado derecho, mientras que Blanco ha hecho un kakari en la esquina inferior izquierda y se ha establecido sobre el lado izquierdo. Ahora le toca a Negro hacer un kakari contra la esquina superior izquierda. ¿Desde qué lado debe atacar?
+
+%d1 p56
+
+Ningún jugador experimentado omitiría Negro 1 y 3 en el Dia. 1. Estas
+jugadas combinan con las tres piedras negras de la derecha, dándole a Ne-
+gro inmensas perpectivas territoriales en el cuadrante superior derecho del
+tablero. Cada una de sus piedras intensifica el valor de las otras. Luego Ne-
+gro A –que habría sido algo extraño antes de 1 y 3–, se ha convertido en un
+punto importante, y volveremos a esta posición un poco más adelante.
+
+Existe cierta clase de jugador de Go que no puede soportar que su opo-
+nente haga ni el menor territorio; tal jugador estaría tentado de irrumpir en
+el lado izquierdo con Negro 1 en el Dia. 2. El joseki sigue hasta Negro 5. El
+grupo negro recientemente formado, se encuentra comprimido entre dos po-
+siciones blancas más fuertes, y no entabla relación con ninguna de las otras
+piedras negras del tablero. El territorio que Blanco no puede conseguir en el
+lado izquierdo, lo adquirirá en el lado superior, y estará atento a la posibili-
+dad de atacar a Negro 1-3-5 en cuanto tenga ocasión. Negro ha errado com-
+pletamente el camino.
+
+Pero si la posición de la esquina inferior izquierda fuera alterada leve-
+mente, como en el Dia. 3, Negro 1 sería más razonable. Ahora las jugadas
+negras estarían trabajando cooperativamente con su shimari para comprimir
+las dos piedras blancas atrapadas entre ellas, que serían incluso más débiles
+que el grupo negro recientemente creado. Relaciones como éstas son las que
+hacen que las jugadas funcionen, o fallen, en el juego de Go.
+
+%d2-3 p57
+\stopsection
+
+\startsection[title={Eficiencia}]
+Eficiencia significa construir el máximo de territorio con el menor nú-
+mero de piedras. En definitiva, esto es de lo que se trata el Go, y todos los
+consejos de este libro constituyen una guía de cómo jugar eficientemente.
+Durante la apertura –además de empezar por las esquinas y de extenderse
+hacia los lados–, el juego eficiente siempre implica examinar el tablero en
+busca del área donde sea posible la jugada más grande, tomando toda la
+ventaja que se pueda de sus posiciones fuertes, así como de las débiles de su
+oponente, y nunca perder tiempo en jugadas innecesarias. Veamos un ejem-
+plo.
+
+El juego del Dia. 1 comenzó con Negro jugando en los puntos 4-4 y
+Blanco en los puntos 3-4. Luego vino el kakari negro en 5, elegido sobre un
+posible kakari en la esquina superior izquierda porque era al mismo tiempo
+una extensión de Negro 3. Blanco 6 comenzó un joseki habitual, que Negro
+terminó extendiéndose a 11, escogiendo la cuarta línea en vez de la tercera
+simplemente por una cuestión de gusto. Contra el kakari blanco en 12, que
+impidió a Negro hacer una extensión de doble ala, Negro usó la jugada de
+pinza en 13, y continuaron las jugadas 14 a 22. Este joseki termina frecuen-
+temente con la siguiente jugada de Negro en A, pero aquí ese movimiento
+sería ineficiente.
+
+%d1 p58
+
+La mejor jugada de Negro se muestra en el Dia. 2, donde Negro 1 y 3
+combinan maravillosamente con Negro ▲ y las dos piedras más lejanas de
+arriba, sobre el lado derecho, para proyectar un área realmente grande.
+Blanco no puede emerger de la tercera línea en el lateral inferior. Es mejor
+para éste jugar 2, y luego dejar por el momento esa parte del tablero, eli-
+giendo quizás el kakari en 4 para su siguiente jugada. Blanco ∆ está recosta-
+do contra una sólida pared de piedras negras, y debe ser abandonado para
+otra oportunidad.
+
+%d2 p59
+
+Si Negro no jugara 1 y 3, entonces una extensión a B, o un kakari en la
+esquina superior izquierda, serían casi tan buenos; pero Negro A sería error.
+
+% d3-4 p59
+
+Esta jugada, mostrada en el Dia. 3, no aprovecha la fuerza de Negro, y
+sería un derrochador exceso dirigido contra Blanco ∆ , mientras que no hace
+nada para detener los movimientos de Blanco en el lado inferior. En vista
+del número de piedras negras en el área, Blanco ∆ debe morir de muerte na-
+tural sin que Negro 1 tenga que ser jugada en absoluto.
+
+En una posición como la del Dia. 4, sin embargo, donde Negro no tiene
+los refuerzos que tenía antes, Negro 1 es una buena jugada. Esta vez, si
+Blanco ∆ se libera, Negro podría encontrarse atacado por arriba y por deba-
+jo. Negro ya no desearía empujar con 1 y 3 en el Dia. 5, porque Blanco po-
+dría trepar hasta la cuarta línea con 4 y 6. Si Blanco tuviera una piedra ya
+emplazada más lejos a la izquierda, podría incluso alcanzar la quinta línea
+jugando 6 en A. Si Negro intentara cortar debajo de Blanco 4 –como en el
+Dia. 6–, Blanco lo empujaría hacia abajo con 6, lo bloquearía en 8, y Negro
+tendría que arrastrarse –si pudiera– a lo largo de la segunda línea.
+
+%5-6 p59
+\stopsection
+
+\startsection[title={Jugar lejos de la fuerza}]
+Éste es un importante principio del juego, y se aplica tanto a las posicio-
+nes fuertes de su oponente, como a las suyas. Jugar cerca de la fuerza del
+enemigo es inútil, y a veces peligroso; jugar cerca de su propia fuerza es in-
+eficiente.
+
+El juego profesional presentado en el Dia. 1 empezó con shimari y ex-
+tensiones alrededor del tablero, seguido por un joseki en la esquina inferior
+derecha que dio a ambos bandos posiciones fuertes. Inmediatamente des-
+pués de eso, Blanco jugó 1 y 3 para restringir el territorio negro en el lado
+derecho, eligiendo para su intrusión, como cuestión de sentido común, la
+parte más abierta del mismo. Su opción sirve como primera ilustración del
+punto principal de esta sección.
+
+%d1 p61
+
+Para comparar, vea qué sucede en el Dia. 2, cuando Blanco juega 1 en el
+lado incorrecto, y Negro se dirige a la izquierda con 2 y 4. Negro está
+haciendo un gran negocio al fortalecerse y agrandar su área superior dere-
+cha con estos movimientos, mientras que Blanco 1 y 3 no dañan en absoluto
+la sólida esquina inferior derecha de Negro. Los pocos puntos de territorio
+que Blanco puede quitarle a Negro en el área alrededor de 1 no le afectan
+gran cosa.
+
+Pero estamos interesados principalmente en las jugadas que siguieron
+Blanco 1 y 3 en el Dia. 1. Blanco estaba pensando, quizás, en Negro 1 y 3
+en el Dia. 3, que son una especie de joseki en esta formación, y que le dan
+ocasión de jugar un buen keima en 4. Está amenazando cortar y rodear el
+shimari de la esquina superior derecha, pero si Negro defiende con 5, Blan-
+co puede combinar 4 con otro keima en 6 para tomar control de un enorme
+territorio potencial en el lado superior. Con esta secuencia, en la que simul-
+táneamente reduce el territorio negro y construye el propio, Blanco toma la
+delantera en el balance territorial. La razón es que Negro 1, 3, y 5 violan el
+principio de jugar lejos de piedras fuertes; en este caso, las piedras en la es-
+quina inferior derecha.
+
+%d2-3 
+%d4 p62
+
+Negro, siendo un jugador profesional, era bien conciente de esto, de
+modo que se despachó con una secuencia más interesante y eficaz. Para ata-
+car a Blanco sin provocar una redundancia de fuerza, jugó 1 en el Dia. 4.
+Blanco defendió sus piedras débiles con 2, y Negro se zambulló profunda-
+mente en el potencial territorio de su oponente con 3, 5, y 7, resarciéndose
+completamente del daño que Blanco le estaba causando en el lado derecho.
+
+Negro 1 no es la clase de extensión que se juega en cualquier ocasión, pero
+las particulares circunstancias de esta partida la hicieron posible. El truco de
+dejar piedras fuertes para valerse por sí mismas, abriéndose paso en alguna
+nueva dirección, siempre es útil; una de las técnicas más fáciles de aprender
+y una de las más gratificantes de poner en práctica.
+\stopsection
+
+\startsection[title={Espesura y paredes}]
+Una pared es un sólida –o casi sólida– línea de piedras que no enfrentan
+el borde del tablero. La espesura se refiere a un conglomerado de piedras sin
+puntos débiles. Las maniobras de empuje y los joseki durante la apertura, a
+menudo producen paredes, espesura, o paredes espesas, y la clave para tra-
+tar con ellas puede encontrarse –en parte– en el principio de la sección ante-
+rior. Siempre es erróneo jugar cerca de la espesura. Es igualmente insensato
+jugar cerca de una pared, puesto que en ambos casos se produce una forma-
+ción ineficiente, si la pared es propia, o se incita a ser atacado, si la pared es
+de su oponente. Una pared, en cambio, es intrínsecamente útil para construir
+territorio, y sería una necedad ignorarla. Es sumamente deseable extenderse
+desde sus propias paredes y hacia las de su oponente, pero al mismo tiempo,
+es aconsejable hacerlo a una distancia que haga estricta justicia al poder de
+la pared. La partida profesional que hemos tomado para ilustrar esta sec-
+ción, muestra varios ejemplos de la técnica apropiada.
+
+%d1-2 p63
+
+El Dia. 1 proporciona las jugadas que nos interesan. El joseki jugado en
+la esquina inferior izquierda ha dejado a Negro con un espeso grupo y una
+pared enfrentando el lado izquierdo. Blanco comienza a reducir el área de
+Negro presionando su piedra de la esquina superior izquierda con 1.
+
+Blanco 1 no impide a Negro tomar territorio en el lado izquierdo, como
+eventualmente hizo jugando 8, de modo que cabe preguntarse por qué Blan-
+co no puso su piedra más abajo, en 1 del Dia. 2, invadiendo el lado izquier-
+do y también haciendo un ataque de pinzas contra Negro ▲ . En verdad, esto
+mete a Blanco en problemas. Negro contraataca con 2 y 4, creando un serio
+punto de corte en A, y sumado a su espesura en la parte inferior izquierda,
+también pone a Blanco 1 en una posición incómoda. Blanco abriga muy po-
+cas esperanzas en la lucha que se avecina. “Permanecer lejos de la espesu-
+ra” es un principio básico del Go, que Blanco 1 en el Dia. 2 viola flagran-
+temente.
+
+%d3 p64
+
+Si damos vuelta las cosas como en el Dia. 3, en cambio, el ataque de
+pinzas de Blanco 1 ahora se convierte en una buena jugada, mejor aún de lo
+que sería Blanco A.
+
+Pero en la partida en examen, Blanco 1 en el Dia. 4 fue correcto. Blanco
+esperaba que Negro contestara en 2, lo que le permitió extenderse a través
+del borde superior hasta 3. Para obtener ventaja de la pared construida por
+1, debió llegar tan lejos como eso, o por lo menos hasta A.
+
+Negro 2 en el Dia. 4 es una jugada valiosa, pero en cierto modo parece
+estrecha e inadecuada en relación con la solidez de la esquina inferior iz-
+quierda; no hay que ser un jugador fuerte para apreciar esto. La extensión
+completa de Blanco a 3 es una jugada más eficiente, y por eso Negro recha-
+zó este diagrama.
+
+%d4 p65
+
+En su lugar, tomó él mismo el punto del lado superior, como muestra el
+Dia. 5. Puesto que se estaba extendiendo hacia una pared blanca, no quiso
+acercarse demasiado, pero al mismo tiempo, tampoco quería jugar demasia-
+do lejos. La decisión oscila entre Negro 1 –la piedra jugada–, y Negro A,
+que aún privaría a Blanco del espacio necesario para una contra-extensión
+completamente eficiente.
+
+%d5 p65
+
+Si Negro se hubiese extendido una línea más lejos de lo que lo hizo, ju-
+gando 1 en el Dia. 6, Blanco lo habría cortado por detrás en 2, con espacio
+suficiente para una ulterior buena extensión a 4. Negro carecería de un es-
+pacio similar a la izquierda de 1. Su mejor extensión sería hacia el centro
+con 3, pero el resultado es un claro fracaso.
+
+%d6 p66
+
+Volviendo a la partida real, Blanco jugó seguidamente 1 y 3 en el Dia. 7,
+construyendo una densa y alta pared, y Negro inmediatamense te extendió
+hacia ella con 4, para prevenir un kakari contra la esquina superior derecha.
+Una jugada como 4 es tan importante que casi se convierte en un reflejo pa-
+ra un jugador experimentado. En efecto, resulta imperativo evitar que Blan-
+co pueda explotar al máximo su compacta posición, pero para ello no es
+necesario llegar demasiado lejos hacia abajo. Negro podría, de hecho,
+haberse extendido hasta A, pero no necesitó ir tan lejos; habría sido
+inseguro exceder el punto A.
+
+%d7 p66
+
+Negro 1 en el Dia. 8 da un paso más, acercándose demasiado a la espe-
+sura de Blanco, invitando al desastre. Luego de las jugadas preparatorias en
+2 y 4, Blanco invade en 6, con lo cual él y Negro se persiguen mutuamente
+hacia el centro, en la secuencia hasta 10.
+
+Negro se escapa, pero Blanco 12 irrumpe en el lado superior. Negro va a
+perder mucho más allí, de lo que le ha quitado a Blanco en la parte inferior
+derecha, y la debilidad de Negro 1, 7, 9, y 11 puede atormentarlo por el resto de la partida.
+
+%d8p67
+
+Volviendo al Dia. 7, en la partida real ambos jugadores habían manejado
+con éxito sus respectivas espesuras. Las posiciones a la izquierda y a la de-
+recha eran aproximadamente simétricas; ninguno de los dos jugadores tenía
+tanto espacio como habrían deseado para extenderse hacia el lateral. No
+obstante, aún había sitio suficiente para dos jugadas bastante grandes, y am-
+bos contendientes hicieron buen uso de sus respectivas posiciones fuertes.
+
+La siguiente jugada de Blanco fue 1 en el Dia. 9, y Negro compensó con
+2 en el otro lado del tablero. Estas jugadas parecen valer aproximadamente
+lo mismo; Blanco igualmente podría haber tomado la esquina superior iz-
+quierda con A, dejando que Negro se extienda sobre el lado derecho a B.
+Cualquiera de los dos intercambios deja las posiciones negra y blanca en
+equilibrio, y la atención se dirige entonces a los mayores espacios abiertos
+que quedan, en los lados superior e inferior. Una manera de abordar este úl-
+timo por parte de Blanco –que no fue la que eligió, aunque quizás debió
+hacerlo– se muestra en el Dia. 10. Blanco empuja con 1 y 3, provocando
+una gruesa pared negra, y luego la neutraliza extendiéndose inmediatamente
+a 5, coordinando muy bien todas sus piedras.
+
+%d9
+%10 p68
+\stopsection
+
+\startsection[title={Abierto en la base}]
+La posición en el Dia. 1 es algo artificial, pero ilustra un concepto im-
+portante en Go. Blanco ha jugado un joseki en el sector inferior derecho que
+le da una fuerte pared externa a cambio del territorio de la esquina. Ahora es
+el turno de Negro, y sería apropiado para éste extenderse hacia la espesura
+de Blanco jugando A o B. ¿Cuál de estos dos puntos es mejor? La clave de
+esta situación es la piedra negra marcada ▲ .
+
+%d1 p69
+
+Negro 1 en Dia. 2 es incorrecto. Blanco, por supuesto, hará un kakari en
+2, y después de Negro 3, puede construir una gran área con 4, o algún mo-
+vimiento semejante.
+
+%d2 p69
+
+La jugada correcta que Negro debe hacer es 1 en el Dia. 3. Blanco 2 y 4
+son similares a 2 y 4 en el diagrama anterior, excepto que ahora el territorio
+blanco tiene un agujero debajo de su línea de flotación, porque Negro puede
+saltar a partir de ▲ a A, una jugada que reduce el territorio blanco en una
+proporción asombrosa. En vista de esto, sería preferible para Blanco, hacer
+su kakari desde el otro lado, en B, o tomar el punto grande en C sobre el la-
+do superior, en vez de jugar 2.
+
+%d3 p70
+
+Negro no debe impacientarse y saltar a A inmediatamente, porque en es-
+ta primera fase del juego, hay otros puntos más grandes. Por supuesto,
+Blanco tendrá ocasión de tapar la filtración jugando en el punto entre A y ▲ ,
+pero el hecho de que necesita esta tercera jugada para sellar su territorio, es
+suficiente para demostrar que 2 y 4 son ineficientes. Negro ▲ hace del lado
+inferior un lugar poco importante para cualquiera de los dos jugadores. Esta
+situación se llama en japonés “{\em susoaki}”, palabra que significa “abierto en la
+base”.
+\stopsection
+
+\startsection[title={La tercera y la cuarta líneas}]
+El Dia. 1 muestra la posición alcanzada después de treinta y cinco juga-
+das en una reciente partida de campeonato. Blanco había obtenido cerca de
+treinta puntos de territorio sobre el lado superior, mientras que Negro senta-
+ba los cimientos de un importante territorio en el cuadrante inferior izquier-
+do del tablero. Blanco hizo un kakari en 1 para mantener el territorio negro
+bajo control, y luego se extendió a 3. En esta sección, estudiaremos sus ra-
+zones para jugar 3 en la cuarta línea, y las consecuencias de haberlo hecho.
+
+%d1-2 pag 71
+
+Pero primero, deseamos comentar Negro 2. Éste no es el modo usual de
+contestar un kakari, pero aquí –dadas las condiciones en el lado izquierdo–
+lo hacen correcto. Negro 2 en el Dia. 2 se aproxima demasiado a las tres
+piedras marcadas ▲ para ser eficiente. Especialmente considerando que la
+esquina aún puede ser invadida en el punto 3-3, Negro ni siquiera está ase-
+gurando suficiente territorio para justificar tal sobreconcentración.
+
+Pero volviendo a la pregunta principal, ¿qué hizo a Blanco jugar 3 en la
+cuarta línea en el Dia. 1?
+
+El Dia. 3 muestra qué sucede cuando Blanco juega en la tercera línea.
+Negro golpea con 2 y 4; una piedra en la tercera línea siempre invita esta
+clase de presión desde arriba. Las jugadas de Negro no solamente agrandan
+su territorio, sino que también intensifican la presión sobre el grupo blanco
+del centro, aún sin ojos. Además, puesto que Blanco ∆ está en la tercera lí-
+nea, será difícil para éste lograr una cantidad apreciable de territorio en el
+lado inferior, aún cuando Negro nunca invada allí. Durante la apertura, no
+es una buena idea alinear de esta manera todas sus piedras sobre la tercera
+línea.
+
+A pesar de lo sentenciado en la máxima precedente, Blanco 1 en el Dia.
+3 no es categóricamente una mala jugada; es demasiado temprano aún, en
+este estadio de la partida, para emitir juicios apodícticos. Ciertamente pare-
+ce que las circunstancias reclaman una extensión en la cuarta línea, pero es
+imposible criticar muy duramente la extensión en la tercera línea, desde que
+es correcta en tantas otras posiciones. En el Dia. 4, por ejemplo, donde Ne-
+gro tiene solamente ▲ en el lado izquierdo y Blanco ∆ está en el punto 4-4,
+Blanco definitivamente debe extenderse según lo mostrado. Jugar Blanco 1
+en A sería solamente invitar a una invasión del lado inferior.
+
+%d3
+%d4 p72
+
+Una piedra en la cuarta línea siempre invita a una invasión, y en la parti-
+da en estudio, Negro aterrizó directamente con 2 y 4 en el Dia. 5. Negro 4
+enfrentó a Blanco 1 –amenazando deslizarse por debajo o detrás de éste–,
+de la misma manera que el kakari de Blanco en ∆ había enfrentado a Negro
+▲ unas jugadas antes, y entonces Negro tomó la iniciativa.
+
+%d5 p73
+
+Blanco 1 en el Dia. 6 luce como un razonable movimiento de pinzas pa-
+ra proteger las piedras blancas de la izquierda, pero el criterio profesional lo
+rechazó. Jugando de esa manera, Blanco parece desarrollarse pobremente.
+Negro 2 ataca la piedra de la esquina inferior derecha. Al mismo tiempo, el
+grupo blanco del centro está débil, e incluso después de Blanco 1, la posibi-
+lidad de que Negro invada y ataque el grupo en el lado inferior subsiste, así
+que Blanco puede encontrarse pronto en apuros en un lugar u otro.
+
+%d6 p73
+
+Era mejor para Blanco jugar 1 en el Dia. 7 y tolerar la extensión negra a
+2. Siguieron Blanco 3, Negro 4, y Blanco 5. Después, Negro atacó en el
+centro, pero desde que Blanco había formado dos grupos fuertes en el lado
+inferior, no tuvo problemas para defenderse. Blanco 3 también redujo el te-
+rritorio negro, otra ventaja para Blanco al elegir esta línea del juego.
+
+%d7 p74
+\stopsection
+
+\startsection[title={Estrategia inversa}]
+“Si usted desea jugar a la derecha, amague primero a la izquierda”, sue-
+na como un absurdo proverbio oriental; pero frecuentemente es la estrategia
+correcta en Go. Para ejemplificarla, volvamos nuevamente a una fase previa
+de la partida comentada en la sección anterior.
+
+La situación estaba como se muestra en el Dia. 1, y la principal preocu-
+pación de Negro era atacar las dos piedras blancas marcadas ∆ , contra las
+cuales ya había hecho una jugada de pinzas. Su propio par de piedras en la
+esquina superior izquierda, sin embargo, no estaba demasiado fuerte, y con-
+cretamente, Blanco amenazaba cortar en A. La misión de Negro era fortale-
+cerse para poder mantener el ataque que había comenzado.
+
+El truco consistía en empujar contra las piedras blancas del lado supe-
+rior, las que en realidad no constituían su objetivo. Negro 1, 3, y 5 en el Dia.
+2 fue una forma hacerlo. Aunque la última de estas piedras era claramente
+sacrificable, forzó a Blanco a jugar 6 y 8, mientras Negro conectó en 7 y
+saltó a 9. Ahora Negro tenía una fuerte e inseparable línea de piedras, y
+había mejorado enormemente su posición en relación a las dos piedras blan-
+cas ∆, que seguían estando tan débiles como siempre. Por otra parte, amena-
+zaba encerrar a Blanco jugando A, haciendo uso nuevamente de Negro 5, y
+aislando las tres piedras blancas de la esquina superior derecha. Blanco tuvo
+que defenderse con 1 en el Dia. 3, y Negro continuó empujando contra el
+lado superior con 2 y 4. Cuando finalmente jugó 6 –el ataque que había te-
+nido en miras desde el principio–, ya tenía una larga y sólida pared contra la
+que comprimir a Blanco. Éste fue un buen ejemplo de estrategia inversa
+usado para reforzar un ataque.
+
+%d1-2 p75
+
+%d3 p76
+
+Para ver otra manera de usar la estrategia inversa, vayamos al Dia. 4.
+Allí, la parte del tablero que reclama atención inmediata es el lado superior,
+donde una piedra blanca débil yace junto a un grupo negro débil. Blanco
+debe hacer algo enseguida para evitar que Negro juege en A, pero a la larga,
+la región más importante es el lado izquierdo. En primer lugar, porque el
+área que Negro ha delineado allí es más grande que cualquier otra del table-
+ro; y en segundo lugar, porque las tres piedras marcadas ▲ están débiles, de
+modo que Blanco tiene una buena oportunidad para atacar.
+
+Puesto que Blanco desea penetrar en el área de la izquierda, debe co-
+menzar empujando a Negro a la derecha, jugando 1 en el Dia. 5. Si Negro
+responde pasivamente con 2, Blanco empujará con 3 y 5, después saltará a
+7, construyendo una cúpula que amenaza ocasionar un gran daño al lado iz-
+quierdo. Negro 2, 4, y 6 no tienen un efecto similar en el lado derecho debi-
+do a la fuerte línea de piedras marcadas ∆ que Blanco tiene allí.
+
+%d4
+%d5 p77
+
+En vez de permitir esto, Negro jugará 2 y 4 en el Dia. 6, pero ahora
+Blanco se está moviendo suave y naturalmente hacia la izquierda. Es como
+si se hubiese lanzado contra Negro, y éste lo rechazara hacia atrás, justo en
+la dirección que quería ir, y aún con mayor impulso.
+
+%d6 p78
+
+En este estadio de la partida, Negro se encontró en una difícil encrucija-
+da. Finalmente decidió lanzarse de cabeza al ataque con 1 y 3 en el Dia. 7,
+aún cuando ello implicó conducir a Blanco directamente al área que estaba
+reservando para sí mismo, reduciendo su territorio concreto a proporciones
+miserables. Blanco 2 en esta secuencia es otro ejemplo de estrategia inversa
+que examinaremos; Blanco primero empujó a Negro en una dirección, y
+luego se arrojó en otra.
+
+%d7 p78
+
+Si Blanco hubiese dado otro salto de un punto hacia adelante, según se
+muestra en el Dia. 8, Negro habría agradecido la oportunidad de defender el
+lado izquierdo con 3. Blanco 2 no estaría contribuyendo demasiado a la
+causa de Blanco; todavía estaría a dos jugadas de salir hacia el centro.
+
+%d8-9 p79
+
+Si Negro se defendiera con 3 después de la extensión diagonal de Blan-
+co en el Dia. 9, Blanco no obstante podría escaparse con una jugada en 4.
+Una vez que su huidizo grupo está fuera de peligro, aún tiene espacio para
+invadir el lado izquierdo, o la esquina superior izquierda, y Negro tiene su
+propio grupo débil susceptible de ser atacado.
+\stopsection
+
+\startsection[title={Liviano y pesado}]
+Los conceptos del juego liviano y pesado son importantes en la apertura
+y el medio juego. Ambos se refieren a la manera en que un jugador se ma-
+neja en las partes del tablero donde está débil. “Pesado” es un término peyo-
+rativo, usado para describir un juego lento y empecinado, cuyo único resul-
+tado es hacer que un grupo de piedras débiles aumente de tamaño, sin por
+ello fortalecerlo. Un grupo pesado es aquél que ha crecido demasiado para
+ser sacrificado, y que no no hace otra cosa que proporcionar al oponente un
+objetivo fácil de atacar. Un grupo liviano es aquél que, aunque es débil, no
+está en posición de ser atacado efectivamente o, si es atacado, puede ser sa-
+crificado. El juego liviano se refiere al estilo rápido y escurridizo que no
+proporciona al oponente ningún objetivo grande para atacar. Veamos un par
+de ejemplos.
+
+En la partida del Dia. 1, Blanco acaba de jugar ∆ , aislando una de las
+piedras de Negro y avanzando hacia la esquina superior derecha. ¿Cómo
+debe responder Negro?
+
+%d1
+%d2 p80
+
+Negro 1 en el Dia. 2 sería la manera correcta de sacar la piedra aislada
+hacia el centro, pero aquí es una jugada pesada. Blanco tiene espacio para
+extenderse a 2; ahora su grupo tiene una base sobre el lateral y Negro no. En
+lo sucesivo, va a ser un fastidio para Negro cuidar este grupo pesado, mien-
+tras que para Blanco, atacarlo será una fuente de placer y beneficio. Por
+ejemplo, puede aumentar su propia fuerza persiguiéndolo, y luego invadir
+en A.
+
+%d3 p81
+
+La jugada correcta, livia-
+na, es Negro 1 en el Dia. 3,
+que ofrenda a Blanco la pie-
+dra marcada ▲ y el territorio
+circundante, pero obtiene
+una absoluta compensación
+en la esquina superior dere-
+cha. Blanco no tiene más al-
+ternativa que aceptar el ofre-
+cimiento; pero después de
+Negro 1, Negro A se conver-
+tiría tanto en un escape co-
+mo en un ataque. Por lo tan-
+to, Blanco primero inter-
+cambia 2 por 3 –esto lo beneficia en el lado izquierdo, y como piensa captu-
+rar a Negro ▲ , no tiene necesidad de jugar 3 él mismo, como jugada cons-
+tructora de ojos–; luego atrapa la piedra negra con 4 y 6. Negro está
+completamente feliz. El intercambio 4-5 ha hecho su esquina superior
+derecha muy fuerte, y Negro ▲ , que ha sido apresada, pero de modo muy
+laxo, permanece como una suerte de lunar en el vientre del territorio blanco.
+
+%d4 p81
+
+El juego liviano es espe-
+cialmente requerido para re-
+ducir las áreas grandes que
+el oponente está desarrollan-
+do, y como ejemplo de esto,
+volvemos a la partida que
+dejamos en la página 57. El
+Dia. 4 muestra la posición a
+la que se llegó. Negro ha
+sentado las bases de un gi-
+gantesco territorio en el cua-
+drante superior derecho del
+tablero, y ahora es el turno
+de Blanco. Si Blanco se con-
+tenta con la construcción de su propio territorio extendiéndose a 1 en el Dia. 5, Negro jugará 2. Blanco 3 hará una formación de doble ala en torno a su
+shimari de la esquina inferior derecha, pero el territorio negro se está des-
+arrollando en una escala mayor, y puede crecer más rápidamente que el
+blanco.
+
+%d5 
+%d6 p82
+
+Por lo tanto, Blanco debe
+jugar 1 en el Dia. 6. Ésta es
+una jugada liviana. Blanco no
+entra demasiado profundo, a
+fin de no ser atacado, pero se
+conforma con hacer una mo-
+desta reducción del potencial
+territorio negro. La secuencia
+de 2 a 6 es natural, y después
+Blanco deja su nuevo y livia-
+no grupo como está, para ex-
+tenderse a 7 y 9. Compare el
+territorio negro ahora con el
+del diagrama anterior, toman-
+do nota que Blanco puede
+seccionar el lado superior ju-
+gando A en algún momento
+posterior. Aunque Blanco 1-
+3-5 no contribuyen mucho a
+la formación de ojos, no hay
+manera muy provechosa para
+que Negro las ataque. De
+hecho, su siguiente jugada fue
+una invasión en el punto 3-3
+en la esquina superior iz-
+quierda.
+
+¿Qué tal si Blanco hubiese hecho una invasión más profunda, eligiendo,
+por ejemplo, 1 en el Dia. 7? En algunas circunstancias esto sería una buena
+jugada, pero no aquí, y cualquier jugador experimentado, viendo Blanco 1,
+diría para sus adentros “demasiado pesado”.
+
+%d7 p83
+
+Después, nuestro experimentado jugador reflexionaría por un momento.
+Una cosa es acusar a una jugada de ser pesada, y otra es saber cuál es la me-
+jor manera de aprovecharse de ese error. Negro A, Blanco B, Negro C en el
+Dia. 7 son una primera idea que viene a la mente, pero después de algún
+análisis, Negro 2 en el Dia. 8 parece funcionar mejor. La secuencia hasta
+Blanco 13 fluye naturalmente, y Negro asegura su territorio a la derecha
+mientras ataca a Blanco con 6 y 12.
+
+%d8 p83
+
+Blanco, por supuesto, ha reducido el territorio negro mucho más en este
+diagrama de lo que había hecho en el Dia. 6, pero por otra parte, no ha cons-
+truido ningún territorio para sí mismo. Además, Negro ha jugardo 2, 4, 8, y
+10, levantando una pared en el centro que brindará apoyo para una invasión
+eficaz en A en el lado izquierdo.
+
+%d9
+%d10 p84
+
+Con 13, Blanco ha salido
+al exterior, pero su grupo
+todavía no tiene dos ojos,
+hecho que traerá consecuen-
+cias sobre todo el tablero.
+En el lado inferior, por
+ejemplo, Negro puede ex-
+tenderse a B. Normalmente
+Blanco no tendría ningún
+problema en invadir detrás
+de esta extensión, pero ahora
+que tiene un grupo débil flo-
+tando a la deriva, no puede
+permitirse crear otro más.
+En síntesis, la invasión le ha
+costado muy cara a Blanco.
+
+Hay un ejemplo más pa-
+ra examinar, esta vez de ju-
+gadas diseñadas para hacer
+pesadas las piedras del opo-
+nente. La mayor parte de la
+acción en la fase inicial de la
+partida del Dia. 9 ha ocurri-
+do en la mitad inferior, pero
+se lograron posiciones esta-
+bles en todo el tablero, y la
+fuerte piedra negra que
+asoma en ▲ , hace del lateral
+derecho un lugar poco atractivo para jugar, de modo que la atención se cen-
+tra en el gran espacio abierto del lado superior. Es el turno de Negro.
+
+A Negro le gustaría tomar el punto grande de 1 en el Dia. 10, pero eso
+no funciona muy bien. Blanco le salta encima con 2 y 4, forzando Negro 3 y
+5, y Negro 1 se convierte en una piedra ineficiente. Negro nunca se habría
+molestado en hacer una extensión tan pequeña desde una posición segura, si
+3 y 5 ya hubiesen estado emplazadas en ese lugar. Blanco construye en gran
+escala con 6 y 8, y toma la delantera (dicho sea de paso, si Negro omitiera
+jugar 7, Blanco 7 lo encerraría herméticamente).
+
+Como un modo de prevenir este mal resultado, Negro pudo intentar la
+extensión diagonal de 1 en el Dia. 11. Blanco entonces tomaría el punto
+grande en 2. Negro tornaría su atención hacia Blanco ∆ , pero esta piedra es
+liviana, y difícil de atacar. Si Negro hace un ataque de pinzas con 3, Blanco
+vive fácilmente con 4, 6, y 8. Blanco 2 y las piedras en la parte inferior de-
+recha neutralizan eficazmente la pared exterior negra.
+
+Después de Blanco 2, sería mucho mejor para Negro intercambiar 3 por
+4 en el Dia. 12, para hacer más pesado a Blanco, antes de atacar con 5. Aho-
+ra Blanco no puede lograr la forma viva que consiguió antes, y Negro tiene
+algo para explotar, pero Blanco aún puede componerse jugando 6.
+
+%11-12 p85
+
+%d13 p86
+
+La mejor manera para que Negro haga pesado a Blanco de entrada, es
+jugando 1, 3, y 5 en el Dia. 13. Nuevamente, Blanco toma el punto grande
+en el lado superior con 6, pero ahora, cuando Negro hace su pinza, tiene tres
+piedras para atacar, en vez de sólo una o dos. Negro 7 toma un punto clave
+en esta configuración, y Blanco no quiere moverse hacia el centro con A,
+porque Negro lo doblará con B, forzándolo a hacer un triángulo vacío en C.
+
+%d14-15 p86
+
+Por supuesto que tal ataque incomoda a Blanco, pero éste no puede per-
+mitirse –a fin de prevenirlo– una jugada como 1 en el Dia. 14, dejando a
+Negro obtener el punto clave en 2. No tiene sentido para Blanco extenderse
+hacia una piedra como ▲ ; ninguno de los dos contendientes puede aspirar a
+construir territorio de alguna importancia en el lado derecho.
+
+La manera correcta para que Blanco responda la jugada de compresión
+de Negro, después del Dia. 13, es chocar de frente con 1 en el Dia. 15. Ne-
+gro puede encerrar a Blanco jugando A o, como parece mejor aquí, puede
+bajar con 2 para mantener a Blanco con insuficiente espacio para ojos.
+Blanco salta a 3, y Negro 4 hace un buen trabajo. Más adelante, Negro
+volverá a atacar al grupo pesado de Blanco, ejerciendo presión sobre éste
+para obtener beneficios en el lado superior, o en cualqueir otra parte del
+tablero.
+\stopsection
+
+\startsection[title={Ataque y defensa}]
+Hasta ahora el lector ha visto muchos ejemplos de carreras (esto es, gru-
+pos sin suficiente espacio para ojos sobre el lateral, que son perseguidos
+hacia el centro del tablero), y ya debe tener una idea bastante acabada de las
+desventajas de ser atacado. La principal es que usted no puede detenerse a
+construir territorio mientras está corriendo por su vida. Al mismo tiempo, si
+su oponente logra formar territorio mientras lo persigue, entonces estará ob-
+teniendo beneficios de la manera más eficiente posible. Incluso aunque no
+pueda construir territorio en forma directa, seguramente podrá conseguir al-
+gún tipo de ventaja al hostigarlo. Cada grupo inseguro del que usted tenga
+que ocuparse es una carga; cada debilidad en su posición, una fuente de ga-
+nancias para su oponente.
+
+Las técnicas de ataque y defensa corresponden sobre todo al medio jue-
+go, pero las batallas libradas en esa fase, tienen sus orígenes en la apertura,
+y sus implicancias estratégicas deben ser estudidas aquí. En este capítulo
+examinaremos tres situaciones de apertura en las que el juego fue guiado
+por consideraciones de ataque y defensa, comenzando por una muy simple,
+ilustrando la estrategia defensiva.
+
+%d1 p88
+
+Puede que usted no reconozca el joseki jugado en la esquina superior iz-
+quierda del Dia. 1, pero no importa, desde que la secuencia de jugadas es
+irrelevante para nuestra discusión. Ahora es el turno de Blanco. Si usted re-
+corre visualmente el tablero, encontrará varios puntos grandes, pero hay uno
+que es mucho más importante que todos los demás. Nadie puede permitirse
+omitir una jugada como ésta.
+
+%d2 p88
+
+Blanco debe sin falta conectar con 1 en el Dia. 2. Esto permite a Negro
+extenderse a 2 en el lado derecho, pero Blanco no tiene ahora ningún grupo
+débil de que preocuparse, y a partir de este punto puede jugar con absoluta
+libertad.
+
+%d3 p89
+
+Si Blanco juega 1 en el Dia. 3, teniendo en miras una ulterior invasión
+en A, Negro cortará en 2, poniendo en fuga las piedras blancas de la esquina
+superior izquierda. Blanco no tendrá oportunidad de jugar A hasta que este
+grupo esté fuera de peligro. Además, con un grupo vacilante en el centro,
+difícilmente podrá embarcarse en una invasión en B en el lado superior. No
+sólo eso: su grupo del lado izquierdo también está bastante débil, y C podría
+convertirse fácilmente en sente para Negro; esta extensión no es muy am-
+plia, pero consolida significativamente la esquina inferior izquierda. La am-
+bición de ganancia de Blanco en el lado derecho, está costándole cara en el
+resto del tablero.
+
+%d4 p90
+
+Blanco 1 en el Dia. 4 es un grueso error que –confiamos– ninguno de
+nuestros lectores cometería. Cerrar el lado izquierdo de esta manera es mu-
+cho menos importante que prevenir el corte. Negro juega 2, y Blanco se en-
+cuentra en el mismo aprieto que en el Dia. 3.
+
+Como otro ejemplo más de estrategia defensiva en acción, estudiaremos
+las jugadas mostradas en el Dia. 5, luego de la pinza negra en 1 y su exten-
+sión a 3. La contra-extensión de Blanco a 4 tenía la ventaja de mantener dé-
+biles a Negro 1 y 3, aunque Blanco A sobre el lado izquierdo habría sido
+igualmente buena. El keima de Negro en 5 indujo Blanco 6 y 8 en la esqui-
+na, y aunque estas jugadas fueron más o menos joseki, estuvieron inspiradas
+en consideraciones de ataque y defensa. Comencemos analizando Blanco 4.
+
+%d5 p90
+
+%d6-7 p91
+
+Una variante del joseki consiste en un ataque de pinzas de Blanco en el
+lado derecho, como se muestra en el Dia. 6. Pero en esta partida, esa varian-
+te metería a Blanco está en apuros. Después de que Negro marcha hacia
+afuera con 2 y 4, , las tres piedras blancas del lado inferior aún no tienen es-
+pacio para ojos, y la fuerte piedra negra marcada ▲ de la esquina superior
+derecha lo deja sin ninguna buena jugada en el lateral derecho. El grupo ne-
+gro que incluye 2 y 4 está débil, pero un grupo débil propio entre dos grupos
+débiles del enemigo, es una posición muy conveniente.
+
+Si ▲ fuese una piedra blanca, entonces Blanco 1 no estaría en tanto peli-
+gro, y Blanco tendría ventaja; pero así como están las cosas, Negro ▲ hace
+que el ataque de pinzas de Blanco le de un pésimo resultado. Blanco 1 va
+contra el principio de no enfrentarse a piedras fuertes.
+
+Por lo tanto, Blanco jugó 1 en el Dia. 7, y Negro desarrolló el lado dere-
+cho con 2. Blanco 3 y 5 fueron jugadas extremadamente importantes. Cons-
+truyeron territorio en la esquina, minaron el lado derecho negro, y sobre to-
+do, dieron a Blanco una segura forma viva.
+
+%d8 p92
+
+Si Blanco omite estas jugadas para ocupar el gran punto 1 en el Dia. 8,
+Negro se desliza dentro de la esquina con 2. Las piedras blancas ahora están
+desarraigadas, y mientras huyen cigamente hacia el centro, Negro se forta-
+lece en un lado con 4 y toma territorio en el otro con 6. Ser atacado de esta
+manera, cuando no hay nada para contraatacar, es intolerable. Tenemos aquí
+el arquetipo de un grupo pesado en plena fuga, un perfecto ejemplo de una
+partida yéndose por el desagüe, debido a la omisión de las más elementales
+precauciones defensivas.
+
+%d9-10 p92
+
+Antes de continuar, cabe notar que Blanco puede vivir jugando 1 en el
+Dia. 9, en vez de A. Esto le da sente, pero de todos modos es incorrecto.
+Negro 2 fortalece considerablemente el grupo en el lado inferior. Blanco A,
+que amenaza infiltrarse por debajo de las piedras negras hacia el lateral de-
+recho, al tiempo que deja al grupo del lado inferior en una situación más
+vulnerable, es una jugada que bien justifica el gote.
+
+%d11-12
+%d13 p93
+
+Puesto que estamos hablando de ataque y defensa, es interesante ver qué
+sucede si Negro se comporta de manera excesivamente agresiva y juega 1
+en el Dia. 10, en vez del keima en A. Blanco responde con 2 en el Dia. 11, y
+empuja hacia el exterior mientras que Negro se arrastra a lo largo de la ter-
+cera línea. Esta vez, Negro no está haciendo tanto territorio en el lado dere-
+cho, y Blanco puede hacer buen uso de su pared atacando las dos piedras
+del lado inferior. Si Negro contesta a Blanco 2 separando y cortando, como
+en el Dia. 12, Blanco queda en buena posición para iniciar una lucha, puesto
+que Negro tiene tres grupos débiles de que ocuparse simultáneamente.
+
+%d14-15 p94
+
+El Dia. 13 muestra las primeras dieciséis jugadas de la última partida de
+ejemplo en este capítulo. Después de los movimientos iniciales en las es-
+quinas, Blanco jugó 6 y 8 en el lado inferior, una alternativa válida, en vez
+de un shimari en la esquina inferior derecha. Negro hizo un kakari en 9, y
+luego se fue a la parte superior izquierda para construir territorio en ese sec-
+tor. Después de Negro 15, Blanco hizo una extensión de cinco líneas a 16.
+La clave para entender esta apertura se encuentra en Blanco 10, asentada
+firmemente en la tercera línea.
+
+Si Blanco hubiese puesto esta piedra en la cuarta línea, según se muestra
+en el Dia. 14, Negro habría seguido una estrategia enteramente diferente,
+jugando 2 en el lateral derecho en vez de hacer el kakari en A. En efecto, es-
+ta extensión delante de un shimari es la jugada normal a esperar, y el lector
+puede estar preguntándose por qué no fue elegida en la partida real.
+
+Negro 2 en el Dia. 15, sin embargo, viola el principio de no jugar en la
+dirección de las piedras fuertes. Es una buena jugada en lo que concierne a
+la parte superior del tablero, pero no tiene prácticamente ningún efecto ad-
+verso sobre Blanco 1. Es decir, Blanco 1 es demasiado fuerte para resultar
+amenazada por cualquier extensión negra hacia ésta; pero por otro lado, es
+demasiado baja, lo que implica que aunque Blanco se extienda desde ésta
+hacia arriba, no obtendría un territorio tan importante como para que Negro
+deba impedir esa extensión a todo trance.
+
+Después de Blanco 16 en
+la partida real, a Negro le
+habría gustado, entre otras
+cosas, invadir el lado derecho,
+pero éso era imposible. Si tu-
+viera la temeridad de jugar 1
+en el Dia. 16, Blanco 2 le da-
+ría algo en que pensar. Dos
+piedras débiles y separadas
+entre sí como 1 y ▲ no tienen
+razón de ser en un estadio tan
+temprano de la apertura. Ne-
+gro puede pensar que está
+destruyendo el territorio de su
+oponente, pero va a estar muy
+ocupado evitando que su in-
+vasión se convierta en una
+misión suicida, mientras
+Blanco hace lo que le plazca.
+Blanco tuvo en cuenta estas
+vicisitudes cuando hizo su ex-
+tensión hacia arriba.
+
+%d16 p95
+
+Una invasión en esta ins-
+tancia tiene sentido, pero el
+lugar para hacerla no es a la
+derecha. Atento la fortaleza y
+solidez de Blanco ∆ , una in-
+vasión allí no parece una muy
+buena idea, aún cuando pueda
+llevársela a cabo sin ser seccionado por Blanco 2. No vale la pena intentar
+luchar contra una piedra como ∆ .
+
+%d17 p95
+
+El Dia. 17 muestra una
+idea más prometedora. Negro
+comienza desarrollando su
+piedra débil con 1 y 3, ayu-
+dando de alguna manera a su
+oponente al cerrar toda posi-
+bilidad de forzar el lado dere-
+cho, pero limitando a Blanco
+a una modesta porción de te-
+rritorio en dicho sector, apro-
+vechando la posición baja de
+Blanco ∆ . Después, si Blanco
+juega 4, Negro invade en 5.
+Negro 1 y 3 hacen mucho
+más difícil la defensa de
+Blanco, y aunque Negro no
+puede capturar ninguna de las
+dos piedras entre las que in-
+vadió, está en condiciones de
+impedir que Blanco consiga
+territorio alguno en el lado in-
+ferior.
+
+%d18-19 p96
+
+En la partida real, Blanco
+no se sometió tan fácilmente
+a las tácticas de Negro, sino que se resistió jugando 1 y 3 en el Dia. 18, en
+vez de 4 en el Dia. 17. El propósito de esta combinación era dejar un punto
+de corte en la formación de Negro, de modo que Blanco tuviera algo que
+amenazar en la lucha venidera; ésta es, también, una de las técnicas de la
+apertura. Negro, imperturbable, apuntaló su línea con 4, 6, 8, y 10, luego in-
+vadió en 12, y lo que siguió después pertenece al medio juego. En caso de
+que a usted le preocupe que Blanco corte con 1 y 3 en el Dia. 19, Negro
+puede contestar en 4, y todo estará bien.
+\stopsection
+\stopchapter
+
+\startchapter[title={Capítulo III. Diez problemas}]
+En el primer capítulo hemos reunido y clasificado algunas de las jugadas
+y formaciones más comunes de la apertura, mientras que en el segundo,
+hemos tratado de exponer los principios estratégicos básicos. Este conoci-
+miento teórico sin duda ayudará al lector, pero como el go se trata en defini-
+tiva de buscar los puntos grandes en el tablero y decidir cuál es el mayor,
+tendrá que confiar en su propio poder de visualización, que se va agudizan-
+do con la experiencia. Las siguientes son diez situaciones de apertura que
+han enfrentado el autor o sus oponentes en distintas oportunidades. Cada
+una se presenta como un problema, para que el lector examine el diagrama y
+seleccione su jugada. En las páginas siguientes encontrará un diagrama
+mostrando varias opciones razonables (calificando con 10 puntos a la mejor
+de ellas, y en forma decreciente las demás), seguido de una suscinta expli-
+cación que fundamente la elección.
+
+En el juego de Go muchas veces es imposible decidir cuál es la mejor
+opción entre dos o más jugadas probables. Otras veces, quizás sí puede
+identificarse una jugada como la mejor, pero varias jugadas más le siguen
+de cerca en mérito. Y hay ocasiones en que simplemente no tenemos ni
+idea; por ejemplo, nadie puede dictaminar cómo deben ser jugadas las pri-
+meras cuatro piedras de la partida. Esta es la razón por la cual el Go admite
+tan diferentes estilos de juego, y continúa fascinando incluso a los jugadores
+profesionales.
+
+Las situaciones planteadas en los siguientes problemas, sin embargo, no
+participan de esa vaguedad. Como mostrarán los diagramas de respuesta,
+siempre habrá varias jugadas bastante buenas (7 puntos o más), y el lector
+debería sentirse satisfecho de encontrar cualquiera de ellas; aunque el autor
+designará una opción como la mejor de todas.
+
+\startsection[title={problema 1}]
+
+Es el turno de Negro.
+% d p99
+
+%d p100
+
+El foco de atención de la partida está en la posición inconclusa del lado
+derecho. Negro debe hacer una jugada de pinzas en cualquiera de los dos
+puntos marcados como 10, atacando las piedras blancas marcadas ∆ mien-
+tras construye territorio delante de su shimari. Si usted eligió jugar una línea
+más arriba, en alguno de los puntos marcados como 8 en la parte superior
+derecha, puede atribuirse el mérito de haber encontrado la correcta direc-
+ción de juego, pero está siendo demasiado tímido.
+
+Dia. 1. Después de Negro 1, Blanco debe empujar hacia el centro con 2
+y 4, para después saltar a 6 (o, si prefiere, continuar empujando en A). Esto
+da comienzo a una lucha cuatripartita entre dos grupos débiles negros y dos
+blancos. Será difícil, pero Negro ya se ha establecido en el mejor terreno ju-
+gando 1.
+
+%d1 p101
+
+Dia. 2. Negro 1, capturando dos piedras y uniendo sus fuerzas, es un
+punto importante, pero Blanco 2 hace segura la posición de Blanco, y quita
+a Negro el territorio del lado derecho.
+
+Dia. 3. Del mismo modo, si Negro juega 1 y 3, Blanco se extenderá a 4,
+sin nada que temer al corte de Negro en A.
+
+%d2-3 p101
+
+Dia. 4. Si Blanco contesta a Negro 1 jugando directamente 2, por ejem-
+plo, Negro capturará en 3. Blanco, con sus tres piedras del lado derecho
+emparedadas entre dos fuertes posiciones negras, enfrenta un sombrío pano-
+rama. Blanco no puede jugar de esta manera; la lucha del Dia. 1 es inevita-
+ble.
+
+%d4-5 p102
+
+Dia. 5. Si Negro juega en el lado izquierdo, 1 parece lo mejor, pero en-
+tonces Blanco jugará 2, 4, y 6, y estará una jugada más adelante sobre el la-
+do derecho de lo que estaba en el Dia. 1.
+
+Dia. 6. Para su referencia, la posición en la esquina inferior derecha de-
+rivó de este joseki de pinzas.
+
+%d6 p102
+\stopsection
+
+\startsection[title={problema 2}]
+Es el turno de negro
+
+%d p103
+
+%d p104
+
+Esta partida comenzó con cierta acción pesada en la parte inferior dere-
+cha. Blanco ha perdido un par de piedras, pero ha logrado vivir en la esqui-
+na y ha hecho buena forma en el centro, y la lucha en ese cuadrante del ta-
+blero está concluida por el momento. Ahora Negro necesita acceder al
+enorme espacio abierto del sector superior izquierdo, que podría convertirse
+rápidamente en territorio blanco si queda desatendido.
+
+Dia. 1 (correcto). El joseki de 1 a 5 fue creado para estas ocasiones. Las
+perspectivas de un gran territorio blanco desaparecen repentinamente frente
+a las jugadas de Negro.
+
+%d1 p105
+
+Dia. 2. Negro 1 aquí está un poco fuera de línea. Negro ha tenido éxito
+en la eliminación del territorio blanco del lado superior, pero sus propias
+piedras están más débiles que en el Dia. 1, y Blanco puede desarrollarse en
+el lado izquierdo con 6. Negro ha incurrido en el error de jugar contra un
+grupo blanco fuerte, cuando debería haber aplicado su presión sobre la pie-
+dra más débil del punto 3--3.
+
+%d2 p105
+
+Dia. 3. Hay algunas otras maneras de jugar kakari contra una piedra so-
+bre el punto 3-3, que se han calificado en el diagrama de la página 104.
+Veamos una de ellas. Si Negro juega 1 aquí (8 puntos), Blanco contestará
+en 2, haciendo territorio en el lado izquierdo. Negro 3 tiene poco efecto en
+el grupo blanco de la derecha, donde Blanco ∆ está sólidamente establecida
+en la tercera línea. Si ∆ estuviera en la cuarta línea, en cambio, Negro 1 y 3
+serían buenas jugadas.
+
+%d3 p106
+
+Dia. 4. Negro 1 aquí es una gran jugada en lo conciernente al lado infe-
+rior, pero Blanco tendrá sente y hará una jugada mayor en el lado superior.
+Del mismo modo, si Negro jugara A o B, Blanco contestaría en 4.
+
+%d4 p106
+\stopsection
+
+\startsection[title={problema 3}]
+Es el turno de Negro
+
+%d p107
+
+%d p108
+
+La clave evidente de este problema reside en la maciza pared que Negro
+ha levantado en la esquina inferior izquierda. ¿Qué debe hacer con ella? Por
+lo pronto, ya ha comenzado correctamente jugando el kakari de ▲ ; ahora
+debe continuar haciendo un salto de un punto (10 puntos), apuntando a la
+construcción de un área realmente grande. Una extensión más conservadora
+hacia abajo sobre el lado izquierdo (5 puntos), sería ineficiente porque se
+aproximaría demasiado a la propia pared.
+
+Dia. 1 (correcto). Cuando Negro juega 1, Blanco debe responder inme-
+diatamente con 2 y 4. Negro puede permitirse jugar 5, teniendo como obje-
+tivo la invasión en A. Negro 5 en B implicaría una sobre-concentración de
+fuerza en relación con la esquina inferior izquierda.
+
+Dia. 2. Esta posición sobrevino en una de las partidas del autor. La juga-
+da que realmente jugó fue 1, y cuando su oponente contestó con 2 y 4, Ne-
+gro consiguió un resultado mejor que en el Dia. 1.
+
+Dia. 3. Pero si Blanco, en vez de jugar 4 como en el diagrama anterior,
+hubiera ocupado el punto clave con 4 en este diagrama, impidiendo a Negro
+hacer adecuado uso de su pared, habría tomado la delantera.
+
+Si usted aprecia el valor de Blanco 4, entonces puede ver que Negro 1 en
+A (6 puntos), que provoca la inmediata respuesta de Blanco en 4, sería una
+mala estrategia.
+
+%d1-2-3 p109
+
+%d4-5-6 p110
+
+Dia. 4. Quizás a usted le preocupe que Blanco juegue 1 aquí. Esto puede
+convertirse en una seria amenaza en el futuro, pero por ahora Blanco sola-
+mente se está comprometiendo a la defensa de un grupo pesado de piedras
+mientras que reduce su propio territorio de la esquina (asumiendo Negro A,
+Blanco B, Negro C, etc.). En consecuencia, Blanco no tendrá urgencia en
+jugar esta secuencia en lo inmediato, de modo que Negro tendrá ocasión de
+conectarse más adelante.
+
+Dia. 5. Yendo al lado derecho del tablero, note que Negro 1, aún cuando
+es la idea usual después de que Blanco haya jugado ∆ , aquí no resulta apro-
+piado, porque la posición de Negro en el sector inferior izquierdo está abier-
+ta en el borde del tablero.
+
+Dia. 6. Sería mejor para Negro atacar de esta manera, porque con su po-
+derío en el sector inferior izquierdo de cara al exterior, no debe temer em-
+barcarse en una carrera. Pero Negro 1 en el Dia. 1 es más importante que es-
+tas jugadas.
+\stopsection
+
+\startsection[title={problema 4}]
+Es el turno de Negro.
+
+%d p111
+
+%d p112
+
+En esta partida Negro está desarrollando un gran territorio en el lado in-
+ferior, mientras Blanco está haciendo lo mismo en el lado izquierdo. El pun-
+to pivotante entre ambas áreas es el keima calificado con 10 puntos. La in-
+vasión del lado superior (7 puntos), también es una gran jugada, pero si Ne-
+gro la hace ahora, y comienza una carrera, probablemente terminará ayu-
+dando a Blanco a hacer territorio seguro en el lado izquierdo. Inversamente,
+si invade el lado izquierdo (4 o 5 puntos), Blanco podría asegurar el lado
+superior mientras lo ataca.
+
+Dia. 1 (correcto). Negro 1 amenaza construir tanto territorio en el lado
+inferior que Blanco casi está obligado a hacer algo al respecto. Blanco A no
+sería suficiente: Negro respondería en B. Es difícil aseverar cuál es el mejor
+punto de acceso, pero Blanco 2 parece apropiado, y las jugadas hasta 5 son
+un desarrollo posible. Atacando, Negro está tomando la iniciativa en la par-
+tida. Si se hace fuerte en el centro, puede invadir con eficacia en C. Si tiene
+algunas piedras emplazadas a la izquierda del grupo blanco en el lado dere-
+cho, entonces Negro D puede adquirir cierta fuerza ofensiva.
+
+%d1 p113
+
+Dia. 2. Si Blanco responde 1 de esta manera, Negro jugará 3, 5, y 7, se-
+guidos por 9, A, o B, que sería más de lo que Blanco puede soportar. Negro
+no debe, en cambio, jugar 3, 5, y 7 antes que 1, puesto que reducen el valor
+de Negro C.
+
+%d2 p113
+
+Dia. 3. Negro 1 aquí es un ejemplo de mala técnica. Aunque desarrolla
+el territorio negro, incrementa el blanco en una escala aún mayor. Si Negro
+hubiera jugado 3 primero (la jugada correcta), y Blanco jugara 2, entonces
+Negro no jugaría 1.
+
+%d3-4 p114
+
+Dia. 4. Si Negro juega 1 aquí, o en A, B, o C, Blanco tomaría el punto
+clave con 2. Esto apunta al lado inferior de Negro y, lo que es más impor-
+tante, favorece las perspectivas de Blanco en los lados izquierdo y superior.
+\stopsection
+
+\startsection[title={problema 5}]
+Es el turno de Blanco.
+
+%d p115
+
+%d p116
+
+Debería estar bastante claro que la jugada más grande ronda por alguna
+parte del lado inferior, así que la cuestión se reduce al alcance de la exten-
+sión que Blanco debe hacer allí. Por empezar, puesto que no hay nada inte-
+resante a qué apuntar en el lado derecho, no tiene caso extenderse sobre la
+cuarta línea. Queda entonces la tercera línea, y por las razones que serán
+explicadas, el ogeima (10 puntos), es lo mejor. Un punto a la derecha sería
+demasiado sumiso. Más lejos hacia la izquierda sería demasiado osado.
+
+Dia. 1 (correcto). Puesto que se Negro ha atrincherado frente al shimari
+de Blanco con ▲ , Blanco debe pensar en defender su retaguardia. Blanco 1
+resuelve las cosas perfectamente. Negro entonces tomará el punto grande de
+la esquina superior izquierda.
+
+%d1 p117
+
+Dia. 2. Si Blanco omite extenderse en el lado inferior, Negro jugará 1.
+Blanco tiene que defenderse en 2, o en el punto directamente encima de 2.
+Negro se está expandiendo en gran escala, mientras que la esquina de Blan-
+co está claramente comprimida.
+
+Dia. 3. Si Blanco se atreve a ignorar Negro 1, entonces seguirá Negro 3,
+y Blanco tendrá que recurrir a medidas de emergencia –comenzando con A–
+para lograr cierta forma viva.
+
+%d2-3 p117
+
+%d4-5 p118
+
+Dia. 4. Blanco 1 aquí está en la dirección correcta, pero llega un poco
+más lejos de lo conveniente. Considerando las piedras negras de las proxi-
+midades, Blanco no puede permitirse semejante brecha en A. Si Blanco ju-
+gara 1, Negro jugaría en el punto 3-3 de la esquina superior izquierda, como
+en el Dia. 1, pero después...
+
+Dia. 5. Negro podría zambullirse en 1. Si Blanco responde en A, queda
+peor de lo que estaba en el Dia. 2. Si contesta en B, en cambio, Negro puede
+vivir por debajo de las piedras de Blanco. Habiéndosele vedado toda posibi-
+lidad de extenderse hacia arriba sobre el lado derecho, Blanco no puede
+permitirse perder también su territorio en el lado inferior.
+
+%d6 p118
+
+Dia. 6. El contacto en 1 es una jugada grande, que permite a Blanco to-
+mar la esquina, fortaleciendo su grupo, y debilitando el negro, pero Negro
+dejará su grupo débil y jugará 4.
+\stopsection
+
+\startsection[title={problema 6}]
+Es el turno de Blanco.
+
+%d p121
+
+%d p122
+
+Las dos piedras blancas en el lado izquierdo, necesitan imperiosamente
+refuerzo, y la jugada diagonal (10 puntos), que simultáneamente ataca la es-
+quina superior izquierda negra, es la mejor. El salto de un punto (8 puntos),
+es otro buen movimiento, pero guarda más relación con el lado superior que
+con el lado izquierdo. El keima (6 puntos), causaría una sobreconcentración
+de fuerza después de que Blanco hiciera la jugada diagonal correcta. La
+manera adecuada de atacar las dos piedras negras del sector inferior iz-
+quierdo sería desde abajo (7 puntos).
+
+%d1 p123
+
+Dia. 1 (correcto). Blanco 1 transforma su frágil y vulnerable extensión
+de tres puntos, en una posición robusta a prueba de invasión, y al mismo
+tiempo fuerza Negro 2, dándole a Blanco la ocasión de tomar el punto gran-
+de 3.
+
+%d2 p123
+
+Dia. 2. Si Negro omite responder Blanco 1, Blanco ataca severamente
+con 3. Ahora Negro 4 no funciona tan bien. Blanco juega 5, y no hay mane-
+ra de que Negro emerja sano y salvo de tan complicada situación.
+
+%d3-4 p124
+
+Dia. 3. Blanco 1 es una jugada tan grande, que le hemos otorgado 9 pun-
+tos. Expande el territorio de Blanco, evita que Negro se extienda, y tiene
+como objetivo Blanco A; aunque no impide Negro 2.
+
+Dia. 4. Ésta es la consecuencia de la invasión negra en el diagrama ante-
+rior. Además de construir territorio, Negro se está fortaleciendo tanto, que
+puede invadir otra vez, en A. Al mismo tiempo, Blanco tiene un serio punto
+de corte entre 3 y 7, y carece de espacio para dos ojos en el lateral.
+\stopsection
+
+\startsection[title={problema 7}]
+Es el turno de Blanco.
+
+%d p125
+
+%d p126
+
+En el centro se está desarrollando una carrera desesperada, y la siguiente
+jugada de Blanco debe ser el keima, marcado 10 puntos. Un empujón más
+(8 puntos), demostraría el razonamiento correcto, pero sería demasiado len-
+to.
+
+Dia. 1 (correcto). Después de Blanco 1, el flujo natural para Negro sería
+saltar a 2, y para Blanco, defender el lado superior con 3. Luego Negro 4 se-
+ría correcto, pero como Blanco 1 ya ha hecho a su grupo del centro lo sufi-
+cientemente fuerte, puede permitirse jugar 5 en el lado izquierdo.
+
+%d1
+%d2 p127
+
+Dia. 2. Si Blanco se defendiera con 1 primero, Negro lo empujaría con
+2, etc., ganando gran fuerza sobre el lado izquierdo. Blanco 3 a 9, aunque
+necesarios, serían casi insignificantes debido a las fuertes piedras negras en
+el lado derecho.
+
+%d3-4 p128
+
+Dia. 3. La extensión de Blanco a 1, invita a Negro 2. Y como Negro tie-
+ne en reserva la secuencia mostrada en el diagrama anterior (comenzando
+en A), Blanco ∆ queda en serio riesgo.
+
+Dia. 4. Pero después de la correcta Blanco 1, Negro 2 no es tan buena.
+Blanco divide los dos grupos débiles negros con 3 y 5. Si luego Negro pro-
+tege su grupo de la derecha, Blanco A captura el de la izquierda.
+
+%d5 p128
+
+Dia. 5. Confiamos en que ninguno de nuestros lectores haya elegido
+Blanco 1 aquí, una jugada pesada que sólo provoca la conexión negra con 2.
+El grupo blanco del centro queda sumamente debilitado después de este in-
+tercambio, y Negro ahora puede atacar dos piedras en el lado derecho –con
+A, por ejemplo–, en vez de solamente una.
+\stopsection
+
+\startsection[title={problema 8}]
+Es el turno de Negro.
+
+%d p129
+
+%d p130
+
+Las piedras débiles son la clave de este problema. Negro desea encontrar
+un modo de consolidar su grupo que emerge del sector inferior derecho
+hacia el centro. Teniendo en cuenta el grupo blanco débil adyacente a él,
+debe hacer la extensión completa en el lado inferior (10 puntos). Extensio-
+nes menores en la misma dirección (6 o 7 puntos), no cumplirían su finali-
+dad.
+
+%d1 p130
+
+Dia. 1 (correcto). Negro 1 coloca al grupo blanco del lado inferior en
+una posición incómoda. Esto automáticamente revaloriza la presión del gru-
+po negro a su derecha.
+
+%d2 p131
+
+Dia. 2. El autor era Blanco en esta partida. Pudo ver que necesitaba in-
+vadir el lado izquierdo, de modo que contra Negro 1 jugó kikashi con 2 para
+poner a su grupo fuera de peligro inminente, aún cuando esto provocó un
+fortalecimiento de la posición de Negro con 3; luego se hizo una base con 4
+y 6. Pero Negro continuó atacando con 7, 9, etcétera, manteniendo a Blanco
+débil, mientras agrandaba sus propios territorios.
+
+%d3 p131
+
+Dia. 3. Blanco no puede ignorar Negro 1. Si, por ejemplo, juega 2 aquí,
+Negro lo encerrará con 3. Ahora Blanco no tiene más remedio que jugar 4 y
+6 para vivir en el lado inferior, pero esto tiene un efecto penoso sobre el
+grupo blanco del lado derecho.
+
+Dia. 4. Si Negro juega 1 para hacer territorio en el lado izquierdo, Blan-
+co –agradecido– se extenderá a 2. Ahora que su propio grupo débil está fue-
+ra de peligro, puede aspirar a atacar el grupo débil negro (comenzando con
+A, quizás), y puede penetrar fácilmente por uno de los huecos en el lado iz-
+quierdo.
+
+%d4 p132
+\stopsection
+
+\startsection[title={problema 9}]
+Es el turno de Negro.
+
+%d p133
+
+%dp 134
+
+Para Negro es importante extenderse desde su shimari, y la extensión de
+tres puntos sobre la tercera línea es la mejor.
+
+Dia. 1. Si Negro no se extiende –y, por ejemplo, sale corriendo hacia el
+centro con 1–, entonces Blanco 2 es enorme. Ahora Blanco está amenazan-
+do arrasar la esquina negra con A, y en el lado inferior puede incrementar su
+territorio con B.
+
+%d1 p134
+
+Dia. 2. Después de jugar 1, Negro no debe temer Blanco 2; por el con-
+trario, debe agradecer a Blanco por darle un buen motivo para jugar 3, ame-
+nazando el corte en A. Inversamente, si Blanco jugara 3, Negro podría jugar
+2.
+
+%d2 p135
+
+Dia. 3. Una extensión de cuatro puntos se pasa un poco más de lo con-
+veniente, puesto que una invasión blanca en A podría materializarse fácil-
+mente en el futuro. Por el contrario, Negro 1 en A sería innecesariamente
+cauteloso, y demasiado estrecho.
+
+%d3-4-5 p135
+
+Dia. 4. Y Negro 1 aquí dejaría a Blanco un buen punto en A. También
+dejaría subsistente la posibilidad de una invasión en B.
+
+Dia. 5. Aquí Negro 1 defiende la esquina, pero Blanco todavía consigue
+el punto grande en 6.
+
+Dia. 6. Esto es lo que siguió cuando el autor jugó Negro 1 en esta posi-
+ción. Blanco entró en acción en el lado derecho con 2. Aún cuando Negro 3
+habría sido mejor jugarlo en 6, el resultado global hasta 15 fue favorable a
+Negro.
+
+%d6 p136
+\stopsection
+
+\startsection[title={problema 10}]
+Es el turno de Blanco.
+
+%d p137
+
+%d p138
+
+El tablero ya se encuentra casi totalmente repartido; todos los grupos
+negros y blancos están fuertes, y es el momento para que Blanco haga la úl-
+tima jugada de la apertura. La extensión de un punto en el lado derecho es la
+mejor. Puede parecer estrecha, pero respeta el principio de permancer lejos
+de la espesura.
+
+Dia. 1. Si Blanco hiciera una de las jugadas de la mitad izquierda del ta-
+blero (5 o 6 puntos), su esquina superior derecha sería invadida. Negro 1 y 3
+desafían las defensas de Blanco. Si Blanco deja a Negro conectar con sus
+fuerzas de la izquierda, sufre una gran pérdida, pero si para a Negro con 4,
+Negro puede vivir con las jugadas de 5 a 11.
+
+%d1-2-3 p139
+
+En algunas circunstancias esto no sería tan malo para Blanco. Se hace
+sólido y fuerte en el exterior, y si hubiera algunas piedras negras débiles al-
+rededor, podría resarcir su pérdida atacándolas. Pero en esta partida, todos
+los grupos están seguramente establecidos, y Blanco no puede permitirse la
+pérdida de su territorio de la esquina.
+
+Dia. 2. Una variante. Esta vez Blanco juega 6 de un modo diferente, pe-
+ro aún así Negro vive. Si Blanco juega A a continuación, Negro responde en
+B.
+
+Dia. 3. Otra variante. Ahora Blanco ha hecho una jugada diagonal con 2,
+y Negro ha continuado hasta 9. Blanco 10 impide a Negro hacer dos ojos,
+pero Negro emerge con 11, y Blanco no puede ganar la lucha que sobrevie-
+ne.
+
+Blanco 10 en A sería mejor, para ser seguidas de Negro 10 y Blanco B;
+pero subsistiría la posibilidad de Negro 11, y el intercambio resultaría favo-
+rable a Negro.
+
+Dia. 4 (correcto). Después de Blanco 1, la invasión en 2 no funciona.
+Blanco 3, 5 y 7 están como antes, pero ahora Blanco puede bloquear a Ne-
+gro 8 con 9. Negro juega atari en 10 e intenta vivir con 12, pero...
+
+%d4-5-6 p140
+
+Dia. 5. Blanco lo mata.
+
+Dia. 6. Blanco 1 y 3 aquí (8 puntos), también mantendrían segura la es-
+quina, pero Negro conseguiría extenderse a 4. Además de tomar un valioso
+territorio en el lateral, Negro 4 apunta nuevamante a una invasión de la es-
+quina.
+
+Blanco 1 en A (6 puntos), o en B (5 puntos), adolecerían de las mismas
+desventajas.
+
+Dia. 7. Sospechamos que muchos de nuestros lectores habrán elegido
+Blanco 1 en este diagrama. Ésta es una de las pocas veces en que una exten-
+sión de dos puntos resulta demasiado larga. Por un lado, porque no hay mu-
+cho que ganar acercándose tanto al fuerte grupo negro de la esquina inferior
+derecha. Pero por otro lado –y es lo más importante–, porque Negro aún
+puede invadir en 2. Blanco 3 ofrece la resistencia más fuerte posible, pero
+Negro juega 4 y, contra Blanco 5, juega 6, 8, y 10, y vive fácilmente.
+
+Dia. 8. Si leemos atentamente este problema de vida y muerte –algo que
+no tenemos que hacer para darnos cuenta de que Blanco 1 es una mala juga-
+da–, se pone un poco complicado. ¿Qué pasa si Blanco juega 5 de esta ma-
+nera? Después de Negro 6 y 8, Blanco puede atacar con 9 y 11.
+
+Dia. 9. Hasta 19, Blanco está muy cerca de rematarlo, pero Negro se
+salva con 20. Si Blanco bloquea en A, Negro jugará B y ganará la carrera
+para capturar por una jugada, hecho que usted puede verificar por sí mismo.
+
+%d7-8-9 p141
+\stopsection
+\stopchapter
+\stoptext
